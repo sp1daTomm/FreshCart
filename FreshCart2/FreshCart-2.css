@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-chi {
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+}
+
+.body-chi {
+    width: 540px;
+    height: 756px;
+    background-color: burlywood;
+    margin: 100px 100px auto;
+}
+
+.body-t-chi {
+    width: 90%;
+    margin: auto;
+
+}
+
+.body-m-chi {
+    width: 90%;
+    margin: auto;
+}
+
+.body-b-chi {
+    width: 90%;
+}
+
+ul.dropdown-menu {
+    width: 90%;
+}
+
+/* .form-check {
+width: 90%;
+}  */
