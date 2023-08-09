@@ -4,15 +4,18 @@
 
 .main-chi {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: bisque;
+    padding: 254px;
 }
 
 .body-chi {
     width: 540px;
-    height: 756px;
+    height: 948px;
     background-color: burlywood;
-    margin: 100px 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .body-t-chi {
@@ -24,6 +27,7 @@
 .body-m-chi {
     width: 90%;
     margin: auto;
+    
 }
 
 .body-b-chi {
