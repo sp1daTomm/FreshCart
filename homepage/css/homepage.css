@@ -2,8 +2,18 @@
     font-family:sans-serif ;
 }
 
+.fs-12p-fu{
+    font-size: 12px;
+}
+
 .fs-14p-fu{
     font-size: 14px;
+}
+
+.red-round-fu{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
 }
 
 .logo-size-fu{
@@ -14,4 +24,24 @@
 .nav-size-fu{
     width: 20px;
     height: 20px;
+}
+
+.flag-size-fu{
+    width: 16px;
+    height: 16px;
+}
+
+.search-fu{
+    width: 494px;
+    padding: 8px 16px;
+}
+
+.search-size-fu{
+    width: 14px;
+    height: 14px;
+}
+
+.search-position-fu{
+    top: calc(50% - 8px);
+    right: 5%;
 }
