@@ -3,12 +3,17 @@
 }
 
 
-
+/* .nav.navbar{
+    height: 72px!important;
+} */
 .main-chi {
     height: 100vh;
     width: 100%;
-    background-color: bisque;
-    padding: 254px;
+    background-color: rgb(231, 231, 231);
+    padding: 54px auto 254px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .body-chi {
@@ -18,10 +23,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .body-t-chi {
     width: 90%;
+    height: 30%;
     margin: auto;
 
 }
@@ -40,6 +47,35 @@ ul.dropdown-menu {
     width: 90%;
 }
 
-/* .form-check {
+.nav-func-chi {
+    width: 20%;
+} 
+.nav-func-chi-2 {
+    width: 96px;
+    display: flex;
+    
+}
+
+.form-control {
+    width: 195px;
+    margin-left: 10px;
+}
+
+.btn-chi {
+    width: 40px;
+    margin-right: 10px ;
+    /* background-image: ; */
+}
+
+.form-check {
 width: 90%;
-}  */
+} 
+
+.human-chi {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    background-image: url(https://freshcart.codescandy.com/assets/images/avatar/avatar-1.jpg);
+    background-size: contain;
+}
