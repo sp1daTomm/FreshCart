@@ -2,8 +2,22 @@
     font-family:sans-serif ;
 }
 
+.fs-12p-fu{
+    font-size: 12px;
+}
+
 .fs-14p-fu{
     font-size: 14px;
+}
+
+.fs-24_5p-fu{
+    font-size: 24.5px;
+}
+
+.red-round-fu{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
 }
 
 .logo-size-fu{
@@ -14,4 +28,48 @@
 .nav-size-fu{
     width: 20px;
     height: 20px;
+}
+
+.flag-size-fu{
+    width: 16px;
+    height: 16px;
+}
+
+.search-fu{
+    width: 494px;
+    padding: 8px 16px;
+}
+
+.search-size-fu{
+    width: 14px;
+    height: 14px;
+}
+
+.search-position-fu{
+    top: calc(50% - 8px);
+    right: 5%;
+}
+
+.nav-color-fu{
+    background-color: #0AAD0A;
+}
+
+.nav-text-color-fu{
+    color: #0AAD0A;
+}
+
+.featured-twoimg-size-fu{
+    width:97.5%;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+}
+
+.featured-twoimg-posi-fu{
+    top: 20%;
+    left: 5%;
+}
+
+.popular-tag-size{
+    width: 21px;
 }
