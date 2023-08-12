@@ -1,5 +1,6 @@
 *{
     font-family:sans-serif ;
+    box-sizing: border-box;
 }
 
 .fs-12p-fu{
@@ -10,12 +11,20 @@
     font-size: 12.25px;
 }
 
+.fs-13p-fu{
+    font-size: 13px;
+}
+
 .fs-14p-fu{
     font-size: 14px;
 }
 
 .fs-17_5p-fu{
     font-size: 17.5px;
+}
+
+.fs-21p-fu{
+    font-size: 21px;
 }
 
 .fs-24_5p-fu{
@@ -85,4 +94,54 @@
 .rating-size-fu{
     width: 12.25px;
     height: 12.25px;
+}
+
+.ppp{
+    padding: 5px;
+}
+
+.footer-img-fu{
+    background-position: center;
+    background-size: cover;
+}
+
+.footer-border-size{
+    width: 26px;
+    height: 26px;
+}
+
+.shop-img-size{
+    width: 64px;
+    height: 64px;
+}
+
+.shop-trash-img{
+    width: 12px;
+    height: 12px;
+}
+
+.shop-width{
+    --bs-offcanvas-width: 520px;
+}
+
+.counter-size{
+    width: 32px;
+    height: 32px;
+}
+
+.counter-line-height{
+    line-height: 32px;
+}
+
+.counter-price-width{
+    width: 200px;
+}
+
+.user-border-clear{
+    --bs-modal-header-border-color:transparent;
+    --bs-modal-footer-border-color:transparent;
+}
+
+.user-position{
+    top: 25%;
 }
