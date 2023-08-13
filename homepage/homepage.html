@@ -142,7 +142,6 @@
                     </div>
                 </div>
 
-
                 <!-- 小icon的購物袋 -->
                 <button class="position-relative p-0 border-0 bg-body" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasShop" aria-controls="offcanvasShop">
@@ -331,8 +330,385 @@
 
 
                 <!-- 小icon的list -->
-                <div>
+                <button class=" p-0 border-0 bg-body" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasList" aria-controls="offcanvasList">
                     <img src="./img/head/list.png" alt="" class="nav-size-fu">
+                </button>
+
+                <!-- list的左側彈出選單 -->
+                <div class="offcanvas offcanvas-start shop-width-fu" tabindex="-1" id="offcanvasList"
+                    aria-labelledby="offcanvasListLabel">
+                    <div class="offcanvas-header">
+                        <img src="./img/head/logo.svg" alt="">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            <input class="form-control me-2 fs-14p-fu  text-body-tertiary opacity-75 col-12"
+                                type="search" placeholder="Search for products" aria-label="Search">
+                            <img src="./img/head/search.png" alt=""
+                                class="search-size-fu position-absolute list-search-position-fu">
+                        </div>
+
+                        <!-- 定位按鈕 -->
+                        <button type="button"
+                            class="btn btn-light bg-body border border-1 col-12 mt-2 opacity-75 fs-14p-fu"><img
+                                src="./img/head/map.png" alt="" class="search-size-fu me-2">Pick Location
+                        </button>
+
+                        <div>
+                            <!-- 小icon的user -->
+                            <button type="button" class="btn btn-primary p-0 border-0 bg-body" data-bs-toggle="modal"
+                                data-bs-target="#userModal">
+                                <img src="./img/head/user.png" alt="" class="nav-size-fu me-3">
+                            </button>
+
+                            <!-- user的登入/註冊介面 -->
+                            <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog user-position">
+                                    <div class="modal-content p-2">
+
+                                        <!-- 標題 開始 -->
+                                        <div class="modal-header user-border-clear">
+                                            <div class="modal-title fs-24_5p-fu fw-bold" id="userModalLabel">Sign Up
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <!-- 標題 結束 -->
+
+                                        <!-- 內容 開始 -->
+                                        <div class="modal-body user-border-clear">
+                                            <div class="fs-14p-fu text-body-secondary">Name</div>
+                                            <div><input type="text" class="rounded col-12 border border-1"></div>
+                                            <div class="fs-14p-fu text-body-secondary">Email address</div>
+                                            <div><input type="text" class="rounded col-12 border border-1"></div>
+                                            <div class="fs-14p-fu text-body-secondary">Passwrod</div>
+                                            <div><input type="text" class="rounded col-12 border border-1"></div>
+                                            <div class="fs-12_25p-fu text-body-tertiary">
+                                                By Signup, you agree to our <span><a href=""
+                                                        class="link-offset-2 link-underline link-underline-opacity-0 text-success">Terms
+                                                        of Service</a></span> & <span><a href=""
+                                                        class="link-offset-2 link-underline link-underline-opacity-0 text-success">Privacy
+                                                        Policy</a></span>
+                                            </div>
+                                        </div>
+                                        <!-- 內容 結束 -->
+
+                                        <!-- 尾巴 開始 -->
+                                        <div class="modal-footer user-border-clear d-flex justify-content-start">
+                                            <button type="button" class="btn btn-success fs-14p-fu fw-bold ">Sign
+                                                Up</button>
+                                        </div>
+                                        <!-- 尾巴 結束 -->
+
+                                        <!-- 尾巴的尾巴 開始 -->
+                                        <div class="fs-14p-fu text-center col-12 text-body-secondary mt-2 mb-3">
+                                            Already have an account?<span
+                                                class="link-offset-2 link-underline link-underline-opacity-0 text-success">
+                                                Sign
+                                                in</span>
+                                        </div>
+                                        <!-- 尾巴的尾巴 結束 -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- more按鈕 -->
+                        <div>
+                            <button class="btn btn-primary bg-success border-0 col-12 mt-2 fs-14p-fu" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseListMore" aria-expanded="false"
+                                aria-controls="collapseListMore">
+                                <img src="./img/head/more.png" alt="" class="search-size-fu me-2">
+                                All Departments
+                            </button>
+                            <div class="collapse" id="collapseListMore">
+                                <div class="card card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Dairy, Bread
+                                            & Eggs
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Snacks &
+                                            Munchies
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruits &
+                                            Vegetables
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Cold Drinks &
+                                            Juices
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Breakfast &
+                                            Instant Food
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Bakery &
+                                            Biscuits
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Chicken, Meat
+                                            & Fish
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 這邊開始折疊 -->
+                        <div>
+                            <!-- Home -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListHome"
+                                    aria-expanded="false" aria-controls="collapseListHome">
+                                    Home
+                                </button>
+                                <div class="collapse" id="collapseListHome">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home1
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home2
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home3
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home4
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home5
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListShop"
+                                    aria-expanded="false" aria-controls="collapseListShop">
+                                    Shop
+                                </button>
+                                <div class="collapse" id="collapseListShop">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Grid
+                                                - Filter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Grid
+                                                - 3 column
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop List
+                                                - Filter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop -
+                                                Filter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Wide
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Single
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Single v2
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Wishlist
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Cart
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Checkout
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Stores -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListStores"
+                                    aria-expanded="false" aria-controls="collapseListStores">
+                                    Stores
+                                </button>
+                                <div class="collapse" id="collapseListStores">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Store
+                                                List
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Store
+                                                Grid
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Store
+                                                Single
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mega menu -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListMegaMenu"
+                                    aria-expanded="false" aria-controls="collapseListMegaMenu">
+                                    Mega menu
+                                </button>
+                                <div class="collapse" id="collapseListMegaMenu">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">Dairy,
+                                                Bread & Eggs
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Butter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Milk
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Curd &
+                                                Yogurt
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Eggs
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Buns &
+                                                Bakery
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Cheese
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Condensed
+                                                Milk
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">
+                                                Breakfast & Instant Food
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Breakfast
+                                                Cereal
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Noodles,
+                                                Pasta & Soup
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Frozen
+                                                Veg Snacks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Frozen
+                                                Non-Veg Snacks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">
+                                                Vermicelli
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Instant
+                                                Mixes
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Batter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruit and
+                                                Juices
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">Cold
+                                                Drinks & Juices
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Soft
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruit
+                                                Juices
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Coldpress
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Water &
+                                                Ice Cubes
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Health
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Herbal
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Milk
+                                                Drinks
+                                            </li>
+                                            <img src="./img/head/hideInList.jpg" alt="">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pages -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListPages"
+                                    aria-expanded="false" aria-controls="collapseListPages">
+                                    Pages
+                                </button>
+                                <div class="collapse" id="collapseListPages">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Blog
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Blog
+                                                Single
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Blog
+                                                Category
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">About us
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">404 Error
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Contact
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Account -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListAccount"
+                                    aria-expanded="false" aria-controls="collapseListAccount">
+                                    Account
+                                </button>
+                                <div class="collapse" id="collapseListAccount">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Sign in
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Sign up
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Forgot
+                                                Password
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">My
+                                                Account
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dashboard -->
+                            <button
+                                class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu border-bottom fw-bold"
+                                type="button">
+                                Dashboard
+                            </button>
+
+                            <!-- Docs -->
+                            <button
+                                class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu border-bottom fw-bold"
+                                type="button">
+                                Docs
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 右邊的icon結束 -->

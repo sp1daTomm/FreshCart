@@ -185,3 +185,12 @@
     width: 120px;
     height: 120px;
 }
+
+.shop-width-fu {
+    --bs-offcanvas-width: 560px;
+}
+
+.list-search-position-fu{
+    top: calc(11% - 10px);
+    right: 5%;
+}
