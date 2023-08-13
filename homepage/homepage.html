@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -87,24 +88,627 @@
                 </div>
 
                 <!-- 小icon的user -->
-                <div>
+                <button type="button" class="btn btn-primary p-0 border-0 bg-body" data-bs-toggle="modal"
+                    data-bs-target="#userModal">
                     <img src="./img/head/user.png" alt="" class="nav-size-fu me-3">
+                </button>
+
+                <!-- user的登入/註冊介面 -->
+                <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog user-position">
+                        <div class="modal-content p-2">
+
+                            <!-- 標題 開始 -->
+                            <div class="modal-header user-border-clear">
+                                <div class="modal-title fs-24_5p-fu fw-bold" id="userModalLabel">Sign Up</div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <!-- 標題 結束 -->
+
+                            <!-- 內容 開始 -->
+                            <div class="modal-body user-border-clear">
+                                <div class="fs-14p-fu text-body-secondary">Name</div>
+                                <div><input type="text" class="rounded col-12 border border-1"></div>
+                                <div class="fs-14p-fu text-body-secondary">Email address</div>
+                                <div><input type="text" class="rounded col-12 border border-1"></div>
+                                <div class="fs-14p-fu text-body-secondary">Passwrod</div>
+                                <div><input type="text" class="rounded col-12 border border-1"></div>
+                                <div class="fs-12_25p-fu text-body-tertiary">
+                                    By Signup, you agree to our <span><a href=""
+                                            class="link-offset-2 link-underline link-underline-opacity-0 text-success">Terms
+                                            of Service</a></span> & <span><a href=""
+                                            class="link-offset-2 link-underline link-underline-opacity-0 text-success">Privacy
+                                            Policy</a></span>
+                                </div>
+                            </div>
+                            <!-- 內容 結束 -->
+
+                            <!-- 尾巴 開始 -->
+                            <div class="modal-footer user-border-clear d-flex justify-content-start">
+                                <button type="button" class="btn btn-success fs-14p-fu fw-bold ">Sign Up</button>
+                            </div>
+                            <!-- 尾巴 結束 -->
+
+                            <!-- 尾巴的尾巴 開始 -->
+                            <div class="fs-14p-fu text-center col-12 text-body-secondary mt-2 mb-3">
+                                Already have an account?<span
+                                    class="link-offset-2 link-underline link-underline-opacity-0 text-success"> Sign
+                                    in</span>
+                            </div>
+                            <!-- 尾巴的尾巴 結束 -->
+                        </div>
+                    </div>
                 </div>
 
-
                 <!-- 小icon的購物袋 -->
-                <div class="position-relative">
+                <button class="position-relative p-0 border-0 bg-body" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasShop" aria-controls="offcanvasShop">
                     <img src="./img/head/shopping-bag.png" alt="" class="nav-size-fu me-3">
                     <span
                         class="position-absolute top-0 start-50 translate-middle bg-success rounded-circle red-round-fu text-center">
                         <span class="fs-12p-fu text-white fw-bold">1</span>
                     </span>
+                </button>
+
+                <!-- 購物袋的右側彈出選單 -->
+                <div class="offcanvas offcanvas-end shop-width" tabindex="-1" id="offcanvasShop"
+                    aria-labelledby="offcanvasShopLabel">
+
+                    <!-- 右側選單的標題列 開始 -->
+                    <div class="offcanvas-header pb-1">
+                        <div class="offcanvas-title" id="offcanvasShopLabel">
+                            <div class="fs-21p-fu fw-bold">Shop Cart</div>
+                            <div class="fs-12_25p-fu text-body-secondary">Location in 382480</div>
+                        </div>
+
+
+                        <!-- 關閉的X -->
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <!-- 右側選單的標題列 結束 -->
+
+                    <!-- 右側選單的本體 開始 -->
+                    <div class="offcanvas-body">
+
+                        <!-- 紅色那條槓 開始 -->
+                        <div class="border-top border-bottom pt-3 pb-4">
+                            <div
+                                class="fs-14p-fu bg-danger-subtle pt-2 pb-2 ps-1 rounded border-danger-subtle border-1 border">
+                                You’ve got FREE delivery. Start <span class="fw-bold">checkout now</span>!
+                            </div>
+                        </div>
+                        <!-- 紅色那條槓 結束 -->
+
+                        <!-- 第一個商品 開始 -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 pb-2 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="./img/Popular_Product/product-img-01.jpg" alt="" class="shop-img-size">
+                                <span>
+                                    <div class="fw-bold fs-14p-fu">Haldiram's Sev Bhujia</div>
+                                    <div class="text-body-tertiary fs-12_25p-fu">.98 / lb</div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./img/head/trash.png" alt="" class="shop-trash-img">
+                                        <div class="text-body-tertiary fs-12_25p-fu">Remove</div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center counter-price-width justify-content-between">
+                                <!-- 商品計數器 -->
+                                <div class="d-flex">
+                                    <button class="counter-size text-center border-0" id="sub1">-</button>
+                                    <div class="counter-size text-center counter-line-height" id="sum1">1</div>
+                                    <button class="counter-size text-center border-0" id="add1">+</button>
+                                </div>
+                                <div class="fs-14p-fu fw-bold ms-5">$5.00</div>
+                            </div>
+                        </div>
+                        <!-- 第一個商品 結束 -->
+
+                        <!-- 第二個商品 開始 -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 pb-2 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="./img/Popular_Product/product-img-02.jpg" alt="" class="shop-img-size">
+                                <span>
+                                    <div class="fw-bold fs-14p-fu">NutriChoice Digestive</div>
+                                    <div class="text-body-tertiary fs-12_25p-fu">250g</div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./img/head/trash.png" alt="" class="shop-trash-img">
+                                        <div class="text-body-tertiary fs-12_25p-fu">Remove</div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center counter-price-width justify-content-between">
+                                <!-- 商品計數器 -->
+                                <div class="d-flex">
+                                    <button class="counter-size text-center border-0" id="sub2">-</button>
+                                    <div class="counter-size text-center counter-line-height" id="sum2">1</div>
+                                    <button class="counter-size text-center border-0" id="add2">+</button>
+                                </div>
+                                <div class="d-flex flex-column align-items-end ms-5">
+                                    <div class="fs-14p-fu fw-bold text-danger">$20.00</div>
+                                    <div class="fs-12_25p-fu text-body-tertiary"><del>$26.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第二個商品 結束 -->
+
+                        <!-- 第三個商品 開始 -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 pb-2 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="./img/Popular_Product/product-img-03.jpg" alt="" class="shop-img-size">
+                                <span>
+                                    <div class="fw-bold fs-14p-fu">Cadbury 5 Star Chocolate</div>
+                                    <div class="text-body-tertiary fs-12_25p-fu">1 kg</div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./img/head/trash.png" alt="" class="shop-trash-img">
+                                        <div class="text-body-tertiary fs-12_25p-fu">Remove</div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center counter-price-width justify-content-between">
+                                <!-- 商品計數器 -->
+                                <div class="d-flex">
+                                    <button class="counter-size text-center border-0" id="sub3">-</button>
+                                    <div class="counter-size text-center counter-line-height" id="sum3">1</div>
+                                    <button class="counter-size text-center border-0" id="add3">+</button>
+                                </div>
+                                <div class="d-flex flex-column align-items-end ms-5">
+                                    <div class="fs-14p-fu fw-bold">$15.00</div>
+                                    <div class="fs-12_25p-fu text-body-tertiary"><del>$20.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第三個商品 結束 -->
+
+                        <!-- 第四個商品 開始 -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 pb-2 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="./img/Popular_Product/product-img-04.jpg" alt="" class="shop-img-size">
+                                <span>
+                                    <div class="fw-bold fs-14p-fu">Onion Flavour Potato</div>
+                                    <div class="text-body-tertiary fs-12_25p-fu">250g</div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./img/head/trash.png" alt="" class="shop-trash-img">
+                                        <div class="text-body-tertiary fs-12_25p-fu">Remove</div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center counter-price-width justify-content-between">
+                                <!-- 商品計數器 -->
+                                <div class="d-flex">
+                                    <button class="counter-size text-center border-0" id="sub4">-</button>
+                                    <div class="counter-size text-center counter-line-height" id="sum4">1</div>
+                                    <button class="counter-size text-center border-0" id="add4">+</button>
+                                </div>
+                                <div class="d-flex flex-column align-items-end ms-5">
+                                    <div class="fs-14p-fu fw-bold">$15.00</div>
+                                    <div class="fs-12_25p-fu text-body-tertiary"><del>$20.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第四個商品 結束 -->
+
+                        <!-- 第五個商品 開始 -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 pb-2 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="./img/Popular_Product/product-img-05.jpg" alt="" class="shop-img-size">
+                                <span>
+                                    <div class="fw-bold fs-14p-fu">Salted Instant Popcorn</div>
+                                    <div class="text-body-tertiary fs-12_25p-fu">100g</div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./img/head/trash.png" alt="" class="shop-trash-img">
+                                        <div class="text-body-tertiary fs-12_25p-fu">Remove</div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center counter-price-width justify-content-between">
+                                <!-- 商品計數器 -->
+                                <div class="d-flex">
+                                    <button class="counter-size text-center border-0" id="sub5">-</button>
+                                    <div class="counter-size text-center counter-line-height" id="sum5">1</div>
+                                    <button class="counter-size text-center border-0" id="add5">+</button>
+                                </div>
+                                <div class="d-flex flex-column align-items-end ms-5">
+                                    <div class="fs-14p-fu fw-bold">$15.00</div>
+                                    <div class="fs-12_25p-fu text-body-tertiary"><del>$25.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第五個商品 結束 -->
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <button type="button" class="btn btn-success fs-14p-fu">Continue shopping</button>
+                            <button type="button" class="btn btn-dark fs-14p-fu">Update Cart</button>
+                        </div>
+                    </div>
+                    <!-- 右側選單的本體 結束 -->
+
                 </div>
 
 
                 <!-- 小icon的list -->
-                <div>
+                <button class=" p-0 border-0 bg-body" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasList" aria-controls="offcanvasList">
                     <img src="./img/head/list.png" alt="" class="nav-size-fu">
+                </button>
+
+                <!-- list的左側彈出選單 -->
+                <div class="offcanvas offcanvas-start shop-width-fu" tabindex="-1" id="offcanvasList"
+                    aria-labelledby="offcanvasListLabel">
+                    <div class="offcanvas-header">
+                        <img src="./img/head/logo.svg" alt="">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            <input class="form-control me-2 fs-14p-fu  text-body-tertiary opacity-75 col-12"
+                                type="search" placeholder="Search for products" aria-label="Search">
+                            <img src="./img/head/search.png" alt=""
+                                class="search-size-fu position-absolute list-search-position-fu">
+                        </div>
+
+                        <!-- 定位按鈕 -->
+                        <button type="button"
+                            class="btn btn-light bg-body border border-1 col-12 mt-2 opacity-75 fs-14p-fu"><img
+                                src="./img/head/map.png" alt="" class="search-size-fu me-2">Pick Location
+                        </button>
+
+                        <div>
+                            <!-- 小icon的user -->
+                            <button type="button" class="btn btn-primary p-0 border-0 bg-body" data-bs-toggle="modal"
+                                data-bs-target="#userModal">
+                                <img src="./img/head/user.png" alt="" class="nav-size-fu me-3">
+                            </button>
+
+                            <!-- user的登入/註冊介面 -->
+                            <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog user-position">
+                                    <div class="modal-content p-2">
+
+                                        <!-- 標題 開始 -->
+                                        <div class="modal-header user-border-clear">
+                                            <div class="modal-title fs-24_5p-fu fw-bold" id="userModalLabel">Sign Up
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <!-- 標題 結束 -->
+
+                                        <!-- 內容 開始 -->
+                                        <div class="modal-body user-border-clear">
+                                            <div class="fs-14p-fu text-body-secondary">Name</div>
+                                            <div><input type="text" class="rounded col-12 border border-1"></div>
+                                            <div class="fs-14p-fu text-body-secondary">Email address</div>
+                                            <div><input type="text" class="rounded col-12 border border-1"></div>
+                                            <div class="fs-14p-fu text-body-secondary">Passwrod</div>
+                                            <div><input type="text" class="rounded col-12 border border-1"></div>
+                                            <div class="fs-12_25p-fu text-body-tertiary">
+                                                By Signup, you agree to our <span><a href=""
+                                                        class="link-offset-2 link-underline link-underline-opacity-0 text-success">Terms
+                                                        of Service</a></span> & <span><a href=""
+                                                        class="link-offset-2 link-underline link-underline-opacity-0 text-success">Privacy
+                                                        Policy</a></span>
+                                            </div>
+                                        </div>
+                                        <!-- 內容 結束 -->
+
+                                        <!-- 尾巴 開始 -->
+                                        <div class="modal-footer user-border-clear d-flex justify-content-start">
+                                            <button type="button" class="btn btn-success fs-14p-fu fw-bold ">Sign
+                                                Up</button>
+                                        </div>
+                                        <!-- 尾巴 結束 -->
+
+                                        <!-- 尾巴的尾巴 開始 -->
+                                        <div class="fs-14p-fu text-center col-12 text-body-secondary mt-2 mb-3">
+                                            Already have an account?<span
+                                                class="link-offset-2 link-underline link-underline-opacity-0 text-success">
+                                                Sign
+                                                in</span>
+                                        </div>
+                                        <!-- 尾巴的尾巴 結束 -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- more按鈕 -->
+                        <div>
+                            <button class="btn btn-primary bg-success border-0 col-12 mt-2 fs-14p-fu" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseListMore" aria-expanded="false"
+                                aria-controls="collapseListMore">
+                                <img src="./img/head/more.png" alt="" class="search-size-fu me-2">
+                                All Departments
+                            </button>
+                            <div class="collapse" id="collapseListMore">
+                                <div class="card card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Dairy, Bread
+                                            & Eggs
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Snacks &
+                                            Munchies
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruits &
+                                            Vegetables
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Cold Drinks &
+                                            Juices
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Breakfast &
+                                            Instant Food
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Bakery &
+                                            Biscuits
+                                        </li>
+                                        <li class="list-group-item fs-14p-fu text-body-secondary border-0">Chicken, Meat
+                                            & Fish
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 這邊開始折疊 -->
+                        <div>
+                            <!-- Home -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListHome"
+                                    aria-expanded="false" aria-controls="collapseListHome">
+                                    Home
+                                </button>
+                                <div class="collapse" id="collapseListHome">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home1
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home2
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home3
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home4
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Home5
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListShop"
+                                    aria-expanded="false" aria-controls="collapseListShop">
+                                    Shop
+                                </button>
+                                <div class="collapse" id="collapseListShop">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Grid
+                                                - Filter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Grid
+                                                - 3 column
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop List
+                                                - Filter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop -
+                                                Filter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Wide
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Single
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Single v2
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Wishlist
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop Cart
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Shop
+                                                Checkout
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Stores -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListStores"
+                                    aria-expanded="false" aria-controls="collapseListStores">
+                                    Stores
+                                </button>
+                                <div class="collapse" id="collapseListStores">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Store
+                                                List
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Store
+                                                Grid
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Store
+                                                Single
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mega menu -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListMegaMenu"
+                                    aria-expanded="false" aria-controls="collapseListMegaMenu">
+                                    Mega menu
+                                </button>
+                                <div class="collapse" id="collapseListMegaMenu">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">Dairy,
+                                                Bread & Eggs
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Butter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Milk
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Curd &
+                                                Yogurt
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Eggs
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Buns &
+                                                Bakery
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Cheese
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Condensed
+                                                Milk
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">
+                                                Breakfast & Instant Food
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Breakfast
+                                                Cereal
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Noodles,
+                                                Pasta & Soup
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Frozen
+                                                Veg Snacks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Frozen
+                                                Non-Veg Snacks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">
+                                                Vermicelli
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Instant
+                                                Mixes
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Batter
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruit and
+                                                Juices
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">Cold
+                                                Drinks & Juices
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Soft
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruit
+                                                Juices
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Coldpress
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Water &
+                                                Ice Cubes
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Health
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Herbal
+                                                Drinks
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Milk
+                                                Drinks
+                                            </li>
+                                            <img src="./img/head/hideInList.jpg" alt="">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pages -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListPages"
+                                    aria-expanded="false" aria-controls="collapseListPages">
+                                    Pages
+                                </button>
+                                <div class="collapse" id="collapseListPages">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Blog
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Blog
+                                                Single
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Blog
+                                                Category
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">About us
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">404 Error
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Contact
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Account -->
+                            <div>
+                                <button
+                                    class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu dropdown-toggle border-bottom fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseListAccount"
+                                    aria-expanded="false" aria-controls="collapseListAccount">
+                                    Account
+                                </button>
+                                <div class="collapse" id="collapseListAccount">
+                                    <div class="card card-body mt-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Sign in
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Sign up
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Forgot
+                                                Password
+                                            </li>
+                                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">My
+                                                Account
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dashboard -->
+                            <button
+                                class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu border-bottom fw-bold"
+                                type="button">
+                                Dashboard
+                            </button>
+
+                            <!-- Docs -->
+                            <button
+                                class="btn btn-primary bg-body border-0 text-dark col-12 mt-2 text-start fs-14p-fu border-bottom fw-bold"
+                                type="button">
+                                Docs
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 右邊的icon結束 -->
@@ -276,44 +880,98 @@
     <div>
 
         <!-- swiper開始 -->
-        <div id="carouselExampleCaptions" class="carousel slide mt-4 mb-5 container" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://fakeimg.pl/250x100/" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+        <div class="container overhidden">
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper mt-4 mb-5">
+                    <div class="swiper-slide position-relative">
+                        <img src="./img/Swiper/slider-1.jpg" alt="" class="rounded">
+                        <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
+                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Opening Sale Discount 50%</div>
+                            <div class="fs-48p-fu fw-bold text-start mt-1">SuperMarket For Fresh Grocery</div>
+                            <div class="fs-17_5p-fu text-body-secondary text-start">Introduced a new model for online
+                                grocery shopping and convenient home delivery.</div>
+                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Swiper/slider-2.jpg" alt="" class="rounded">
+                        <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
+                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Free Shipping - orders over $100</div>
+                            <div class="fs-48p-fu fw-bold text-start mt-1">Free Shipping on orders over <span
+                                    class="text-success">$100</span></div>
+                            <div class="fs-17_5p-fu text-body-secondary text-start">Free Shipping to First-Time
+                                Customers Only, After promotions and discounts are applied.
+                            </div>
+                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                        </span>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://fakeimg.pl/250x100/" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
         <!-- swiper結束 -->
 
         <!-- Featured Categories開始 -->
-        <div></div>
+        <div class="container mb-5">
+            <div class="fs-24_5p-fu fw-bold mb-3">Featured Categories</div>
+            <div class="swiper mySwiper2  position-relative">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-dairy-bread-eggs.jpg" alt=""
+                            class="featured-swiper-size pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Dairy,Bread & Eggs</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-snack-munchies.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Snack & Munchies</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-bakery-biscuits.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Bakery & Biscuits</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-instant-food.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Instant Food</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-tea-coffee-drinks.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Tea,Coffee & Drinks</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-atta-rice-dal.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Atta,Rice & Dal</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-baby-care.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Baby Care</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-chicken-meat-fish.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Chicken,Meat & Fish</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-cleaning-essentials.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Cleaning Essentials</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-pet-care.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Pet Care</div>
+                    </div>
+                </div>
+                <div class="swiper-button-next position-absolute"></div>
+                <div class="swiper-button-prev position-absolute"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <!-- Featured Categories結束 -->
 
         <!-- 兩張圖片開始 -->
@@ -345,27 +1003,432 @@
 
         <!-- Popular Products開始 -->
         <div class="container mt-3">
-            <div class="fw-bold fs-24_5p-fu">Popular Products</div>
-            <div>
-                <div class="card" style="width: 18rem;">
-                    <div class="bg-danger text-white fw-bold fs-12p-fu ps-2 pe-2 ">sale</div>
-                    <img src="./img/Popular_Product/product-img-01.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="fw-bold fs-24_5p-fu mb-3">Popular Products</div>
+            <div class="d-flex row-cols-5 flex-wrap w-100 mb-3 justify-content-between">
+
+                <!-- 第一件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <div class="bg-danger ps-2 pe-2 popular-tag-size-fu rounded-1 text-center"><span
+                                class="text-white fw-bold fs-12p-fu">Sale</span></div>
+                        <img src="./img/Popular_Product/product-img-01.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Snack & Munchies</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Haldiram's
+                                Sev Bhujia</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5(149)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$18 <del class="text-body-secondary">$24</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                </div>
+
+                <!-- 第二件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <div class="bg-success ps-2 pe-2 popular-tag-size-fu rounded-1 text-center"><span
+                                class="text-white fw-bold fs-12p-fu">14%</span></div>
+                        <img src="./img/Popular_Product/product-img-02.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Bakery & Biscuits</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">NutriChoice
+                                Digestive</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5(25)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$24</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第三件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <br>
+                        <img src="./img/Popular_Product/product-img-03.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Bakery & Biscuits</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Cadbury
+                                5 Star Chocolate</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">5(469)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$32 <del class="text-body-secondary">$35</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第四件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <div class="bg-danger ps-2 pe-2 popular-tag-size-fu rounded-1 text-center"><span
+                                class="text-white fw-bold fs-12p-fu">Hot</span></div>
+                        <img src="./img/Popular_Product/product-img-04.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Snack & Munchies</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Onion
+                                Flavour Potato</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/zero-point.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">3.5(456)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$3 <del class="text-body-secondary">$5</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第五件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <br>
+                        <img src="./img/Popular_Product/product-img-05.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Instant Food</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Salted
+                                Instant Popcorn</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5(39)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第六件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <div class="bg-danger ps-2 pe-2 popular-tag-size-fu rounded-1 text-center"><span
+                                class="text-white fw-bold fs-12p-fu">Sale</span></div>
+                        <img src="./img/Popular_Product/product-img-06.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Dairy, Bread & Eggs</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Blueberry
+                                Greek Yogurt</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5(189)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$18 <del class="text-body-secondary">$24</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第七件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <br>
+                        <img src="./img/Popular_Product/product-img-07.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Dairy, Bread & Eggs</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Britannia
+                                Cheese Slices</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">5(345)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$18 <del class="text-body-secondary">$24</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第八件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <br>
+                        <img src="./img/Popular_Product/product-img-08.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Instant Food</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Kellogg's
+                                Original Cereals</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/zero-point.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4(90)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$32 <del class="text-body-secondary">$35</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第九件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <br>
+                        <img src="./img/Popular_Product/product-img-09.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Snack & Munchies</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Slurrp
+                                Millet Chocolate</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5(67)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$3 <del class="text-body-secondary">$5</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第十件 -->
+                <div class="col p-1">
+                    <div class="card p-3">
+                        <br>
+                        <img src="./img/Popular_Product/product-img-10.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Snack & Munchies</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Haldiram's
+                                Sev Bhujia</a>
+                            <div class="mb-2">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/zero-point.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">3.5(89)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1">+ Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Popular Products結束 -->
 
         <!-- Daily Best Sells開始 -->
-        <div></div>
+        <div class="container mt-3">
+            <div class="fw-bold fs-24_5p-fu mb-3 mt-5">Daily Best Sells</div>
+            <div class="d-flex w-100">
+
+                <!-- 第一件 -->
+                <div class="card col">
+                    <img src="./img/Daily_Best_Sells/banner-deal.jpg" class="card-img-top position-relative" alt="">
+                    <div class="position-absolute mt-4 ms-3">
+                        <div class="fs-24_5p-fu fw-bold text-white">100% Organic Coffee Beans.</div>
+                        <div class="fs-14 text-white mb-3">Get the best deal before close.</div>
+                        <a href="#" class="btn btn-success text-center">Shop Now -></a>
+                    </div>
+                </div>
+
+                <!-- 第二件 -->
+                <div class="card col ms-3">
+                    <img src="./img/Daily_Best_Sells/product-img-11.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <div class="fs-12p-fu text-body-secondary">Tea, Coffee & Drinks</div>
+                        <a href="#"
+                            class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Roast
+                            Ground Coffee</a>
+                        <div class="mb-2 d-flex justify-content-between">
+                            <div>
+                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                            </div>
+                            <div>
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
+                        <div class="row">
+                            <div class="card col m-1">
+                                <div class="card-body fs-13p-fu text-body-tertiary" id="realDate1">
+                                    Days
+                                </div>
+                            </div>
+                            <div class="card col m-1">
+                                <div class="card-body">
+                                    <span class="fs-13p-fu text-body-tertiary" id="hour1">Hours</span>
+
+                                </div>
+                            </div>
+                            <div class="card col m-1">
+                                <div class="card-body fs-13p-fu text-body-tertiary" id="minute1">
+                                    Mins
+                                </div>
+                            </div>
+                            <div class="card col m-1">
+                                <div class="card-body fs-13p-fu text-body-tertiary" id="second1">
+                                    Secs
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第三件 -->
+                <div class="card col ms-3">
+                    <img src="./img/Daily_Best_Sells/product-img-12.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
+                        <a href="#"
+                            class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Crushed
+                            Tomatoes</a>
+                        <div class="mb-2 d-flex justify-content-between">
+                            <div>
+                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                            </div>
+                            <div>
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
+                    </div>
+                </div>
+
+                <!-- 第四件 -->
+                <div class="card col ms-3">
+                    <img src="./img/Daily_Best_Sells/product-img-13.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
+                        <a href="#"
+                            class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Golden
+                            Pineapple</a>
+                        <div class="mb-2 d-flex justify-content-between">
+                            <div>
+                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                            </div>
+                            <div>
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Daily Best Sells結束 -->
 
         <!-- 各種說明開始 -->
-        <div></div>
+        <div class="d-flex justify-content-around container mt-5 mb-5">
+            <div class="col-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/clock.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">10 minute grocery now</h5>
+                    <p class="card-text fs-14p-fu">Get your order delivered to your doorstep at the earliest from
+                        FreshCart pickup
+                        stores near you.</p>
+                </div>
+            </div>
+            <div class="col-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/gift.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">Best Prices & Offers</h5>
+                    <p class="card-text fs-14p-fu">Cheaper prices than your local supermarket, great cashback offers to
+                        top it off. Get best pricess & offers.</p>
+                </div>
+            </div>
+            <div class="col-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/package.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">Wide Assortment</h5>
+                    <p class="card-text fs-14p-fu">Choose from 5000+ products across food, personal care, household,
+                        bakery, veg and non-veg & other categories.</p>
+                </div>
+            </div>
+            <div class="col-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/refresh-cw.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">Easy Returns
+                    </h5>
+                    <p class="card-text fs-14p-fu">Not satisfied with a product? Return it at the doorstep & get a
+                        refund within hours. No questions asked<span>
+                            <a href=""
+                                class="text-success link-offset-2 link-underline link-underline-opacity-0">policy</a></span>.
+                    </p>
+                </div>
+            </div>
+        </div>
         <!-- 各種說明結束 -->
 
     </div>
@@ -373,26 +1436,236 @@
 
 
     <!-- footer開始 -->
-    <div>
+    <div class="bg-body-secondary pt-5 pb-5">
+        <div class="container mt-5">
 
-        <!-- 各種a連結開始 -->
-        <div></div>
-        <!-- 各種a連結結束 -->
+            <!-- 各種a連結開始 -->
+            <div class="row border-bottom">
 
-        <!-- 信用卡+商店連結開始 -->
-        <div></div>
-        <!-- 信用卡+商店連結結束 -->
+                <div class="fw-bold col-2 fs-14p-fu">
+                    Categories
+                    <div class="mt-4">
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Vegetables & Fruits
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Breakfast & instant food
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Bakery & Biscuits
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Atta, rice & dal
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Sauces & spreads
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Organic & gourmet
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Baby care
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Cleaning essentials
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Personal care
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 提及開始 -->
-        <div></div>
-        <!-- 提及結束 -->
+                <div class="fw-bold col-2 fs-14p-fu">
+                    &nbsp;
+                    <div class="mt-4">
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Dairy, bread & eggs
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Cold drinks & juices
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Tea, coffee & drinks
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Masala, oil & more
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Chicken, meat & fish
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Paan corner
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Pharma & wellness
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Home & office
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Pet care
+                        </div>
+                    </div>
+                </div>
 
+                <div class="fw-bold col-2 fs-14p-fu">
+                    Get to know us
+                    <div class="mt-4">
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Company
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            About
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Blog
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Help Center
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Our Value
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fw-bold col-2 fs-14p-fu">
+                    For Consumers
+                    <div class="mt-4">
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Payments
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Shipping
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Product Returns
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            FAQ
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Shop Checkout
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fw-bold col-2 fs-14p-fu">
+                    Become a Shopper
+                    <div class="mt-4">
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Shopper Opportunities
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Become a Shopper
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Earnings
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Ideas & Guides
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            New Retailers
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fw-bold col-2 fs-14p-fu">
+                    Freshcart programs
+                    <div class="mt-4">
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Freshcart programs
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Gift Cards
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Promos & Coupons
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Freshcart Ads
+                        </div>
+                        <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
+                            Careers
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 各種a連結結束 -->
+
+            <!-- 信用卡+商店連結開始 -->
+            <div class=" d-flex border-bottom justify-content-between pt-3 pb-3">
+                <div class="d-flex align-items-center">
+                    <span class="fs-14p-fu fw-bold me-2">Payment Partners</span>
+                    <img src="./img/footer/amazonpay.svg" class="me-2" alt="">
+                    <img src="./img/footer/american-express.svg" class="me-2" alt="">
+                    <img src="./img/footer/mastercard.svg" class="me-2" alt="">
+                    <img src="./img/footer/paypal.svg" class="me-2" alt="">
+                    <img src="./img/footer/visa.svg" alt="">
+                </div>
+                <div class="d-flex align-items-center">
+                    <span class="fs-14p-fu fw-bold me-2 me-2">Get deliveries with FreshCart</span>
+                    <img src="./img/footer/appstore-btn.svg" class="me-2" alt="">
+                    <img src="./img/footer/googleplay-btn.svg" alt="">
+                </div>
+            </div>
+            <!-- 信用卡+商店連結結束 -->
+
+            <!-- 提及開始 -->
+            <div class="d-flex justify-content-between mt-3">
+                <div class="fs-12_25p-fu text-body-tertiary fw-bold">
+                    © 2022 - 2023 FreshCart eCommerce HTML Template. All rights reserved. Powered by <span>
+                        <a href=""
+                            class="text-success link-offset-2 link-underline link-underline-opacity-0">Codescandy</a></span>
+                    .</div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <span class="fs-12_25p-fu text-body-tertiary me-2 fw-bold">Follow us on</span>
+                    <span
+                        class="opacity-75 border rounded footer-border-size d-flex justify-content-center align-items-center me-2">
+                        <img src="./img/footer/facebook.png" class="flag-size-fu opacity-75" alt="">
+                    </span>
+                    <span
+                        class="opacity-75 border rounded footer-border-size d-flex justify-content-center align-items-center me-2">
+                        <img src="./img/footer/twitter.png" class="flag-size-fu opacity-75" alt="">
+                    </span>
+                    <span
+                        class="opacity-75 border rounded footer-border-size d-flex justify-content-center align-items-center">
+                        <img src="./img/footer/instagram.png" class="flag-size-fu opacity-75" alt="">
+                    </span>
+                </div>
+            </div>
+            <!-- 提及結束 -->
+        </div>
     </div>
     <!-- footer結束 -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="./js/homepage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- swiper -->
+    <script>
+        var swiper1 = new Swiper(".mySwiper1", {
+            autoplay: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            autoplay: true,
+            slidesPerView: 6,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
