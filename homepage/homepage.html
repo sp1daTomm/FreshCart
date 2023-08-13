@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -132,7 +133,9 @@
 
                             <!-- 尾巴的尾巴 開始 -->
                             <div class="fs-14p-fu text-center col-12 text-body-secondary mt-2 mb-3">
-                                Already have an account?<span class="link-offset-2 link-underline link-underline-opacity-0 text-success"> Sign in</span>
+                                Already have an account?<span
+                                    class="link-offset-2 link-underline link-underline-opacity-0 text-success"> Sign
+                                    in</span>
                             </div>
                             <!-- 尾巴的尾巴 結束 -->
                         </div>
@@ -501,44 +504,98 @@
     <div>
 
         <!-- swiper開始 -->
-        <div id="carouselExampleCaptions" class="carousel slide mt-4 mb-5 container" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://fakeimg.pl/250x100/" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+        <div class="container overhidden">
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper mt-4 mb-5">
+                    <div class="swiper-slide position-relative">
+                        <img src="./img/Swiper/slider-1.jpg" alt="" class="rounded">
+                        <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
+                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Opening Sale Discount 50%</div>
+                            <div class="fs-48p-fu fw-bold text-start mt-1">SuperMarket For Fresh Grocery</div>
+                            <div class="fs-17_5p-fu text-body-secondary text-start">Introduced a new model for online
+                                grocery shopping and convenient home delivery.</div>
+                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Swiper/slider-2.jpg" alt="" class="rounded">
+                        <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
+                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Free Shipping - orders over $100</div>
+                            <div class="fs-48p-fu fw-bold text-start mt-1">Free Shipping on orders over <span
+                                    class="text-success">$100</span></div>
+                            <div class="fs-17_5p-fu text-body-secondary text-start">Free Shipping to First-Time
+                                Customers Only, After promotions and discounts are applied.
+                            </div>
+                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                        </span>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://fakeimg.pl/250x100/" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
         <!-- swiper結束 -->
 
         <!-- Featured Categories開始 -->
-        <div></div>
+        <div class="container mb-5">
+            <div class="fs-24_5p-fu fw-bold mb-3">Featured Categories</div>
+            <div class="swiper mySwiper2  position-relative">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-dairy-bread-eggs.jpg" alt=""
+                            class="featured-swiper-size pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Dairy,Bread & Eggs</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-snack-munchies.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Snack & Munchies</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-bakery-biscuits.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Bakery & Biscuits</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-instant-food.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Instant Food</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-tea-coffee-drinks.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Tea,Coffee & Drinks</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-atta-rice-dal.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Atta,Rice & Dal</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-baby-care.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Baby Care</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-chicken-meat-fish.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Chicken,Meat & Fish</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-cleaning-essentials.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Cleaning Essentials</div>
+                    </div>
+                    <div class="swiper-slide border rounded pb-4">
+                        <img src="./img/Featured_Categories/swiper/category-pet-care.jpg" alt=""
+                            class="featured-swiper-size  pt-4 ps-5 pe-5 mb-3">
+                        <div class="fs-14p-fu text-body-tertiary fw-bold">Pet Care</div>
+                    </div>
+                </div>
+                <div class="swiper-button-next position-absolute"></div>
+                <div class="swiper-button-prev position-absolute"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <!-- Featured Categories結束 -->
 
         <!-- 兩張圖片開始 -->
@@ -879,23 +936,23 @@
                         <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
                         <div class="row">
                             <div class="card col m-1">
-                                <div class="card-body fs-13p-fu text-body-tertiary">
+                                <div class="card-body fs-13p-fu text-body-tertiary" id="realDate1">
                                     Days
                                 </div>
                             </div>
                             <div class="card col m-1">
                                 <div class="card-body">
-                                    <span class="fs-13p-fu text-body-tertiary">Hours</span>
+                                    <span class="fs-13p-fu text-body-tertiary" id="hour1">Hours</span>
 
                                 </div>
                             </div>
                             <div class="card col m-1">
-                                <div class="card-body fs-13p-fu text-body-tertiary">
+                                <div class="card-body fs-13p-fu text-body-tertiary" id="minute1">
                                     Mins
                                 </div>
                             </div>
                             <div class="card col m-1">
-                                <div class="card-body fs-13p-fu text-body-tertiary">
+                                <div class="card-body fs-13p-fu text-body-tertiary" id="second1">
                                     Secs
                                 </div>
                             </div>
@@ -1212,6 +1269,27 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="./js/homepage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- swiper -->
+    <script>
+        var swiper1 = new Swiper(".mySwiper1", {
+            autoplay: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            autoplay: true,
+            slidesPerView: 6,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
