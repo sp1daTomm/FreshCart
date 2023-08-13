@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Products Dashboard - FreshCart </title>
+    <title>Order List Dashboard - FreshCart </title>
     <link rel="shortcut icon" type="image/x-icon" href="">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./FreshCart-2.css">
-    
+    <link rel="stylesheet" href="FreshCart-2.css">
+
     <style>
-        /* 768px , 991px , 1200px 變版 */
+        /* 768px , 992px , 1200px 變版 */
     </style>
 </head>
 
@@ -21,36 +21,135 @@
         <nav class="navbar bg-body-tertiary fixed-top d-flex flex-row justify-content-between">
             <div class="nav-func-chi">
                 <div class="container-fluid d-flex">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                         aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <i class="bi bi-text-indent-right"></i>
                     </button>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="https://freshcart.codescandy.com/dashboard/products.html#">link連結在這</a></h5>
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                                <a href="https://freshcart.codescandy.com/dashboard/order-list.html"><img
+                                        src="https://freshcart.codescandy.com/assets/images/logo/freshcart-logo.svg"
+                                        alt="測試圖片" border="0"></a>
+                            </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <i class="bi bi-house"></i>
+                                    <a class="nav-link-1 active" aria-current="page" href="#">Dashboard</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Dropdown
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <br>
 
-                                    </ul>
+                                <li class="span-fs">Store Management</li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-cart"></i>
+                                    <a class="nav-link-1 active" aria-current="page" href="#">Products</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-list-ul"></i>
+                                    <a class="nav-link-1 active" aria-current="page" href="#">Categories</a>
+                                </li>
+                                <br>
+                                <br>
+
+
+
+
+                                <li class="nav-item">
+                                    <button class="nav-item dropdown border-0 bg-white type=" button"
+                                        data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent0"
+                                        aria-controls="navbarToggleExternalContent0" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <a class="nav-link-2 d-inline chev1" aria-current="page" href="#">
+                                            <i class="bi bi-bag"></i>&nbsp&nbsp&nbspOrders</a>
+                                        <div class="collapse" id="navbarToggleExternalContent0" data-bs-theme="white">
+                                            <div class="bg-white p-4">
+                                                <ul class="">
+                                                    <li><a class="dropdown-item d-flex justify-content-start " href="#">
+                                                            <div class="bullet-dot"></div>List
+                                                        </a></li>
+                                                    <br>
+                                                    <br>
+
+                                                    <li><a class="dropdown-item d-flex justify-content-start" href="#">
+                                                            <div class="bullet-dot"></div>Single
+                                                        </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <br>
+
+
+
+
+                                <li class="nav-item">
+                                    <i class="bi bi-shop"></i>
+                                    <a class="nav-link-1 active" aria-current="page" href="#">Sellers / Vendors</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-people"></i>
+                                    <a class="nav-link-1 active" aria-current="page" href="#">Customers</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-star"></i>
+                                    <a class="nav-link-1 active" aria-current="page" href="#">Reviews</a>
+                                </li>
+                                <br>
+                                <li class="span-fs">Site Setting <span class="blue-b">Coming Soon</span></li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-newspaper"></i>
+                                    <a class="nav-link-1 active" aria-current="page">Blog</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-images"></i>
+                                    <a class="nav-link-1 active" aria-current="page">Media</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-gear"></i>
+                                    <a class="nav-link-1 active" aria-current="page">Store Setting</a>
+                                </li>
+                                <br>
+                                <li class="span-fs">Support <span class="blue-b">Coming Soon</span></li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-headphones"></i>
+                                    <a class="nav-link-1 active" aria-current="page">Support ticket</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-question-circle"></i>
+                                    <a class="nav-link-1 active" aria-current="page">Help Center</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-infinity"></i>
+                                    <a class="nav-link-1 active" aria-current="page">How FreshCart Works</a>
+                                </li>
+                                <br>
+                                <li class="span-fs">Our Apps</li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-apple"></i>
+                                    <a class="nav-link-1 active" aria-current="page">Apple Store</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <i class="bi bi-google-play"></i>
+                                    <a class="nav-link-1 active" aria-current="page">Google Play Store</a>
                                 </li>
                             </ul>
                         </div>
@@ -60,7 +159,7 @@
                     </form>
 
                 </div>
-                
+
             </div>
             <div class="nav-func-chi-2 ">
                 <button type="button" class="btn btn-chi btn-white position-relative rounded-circle">
@@ -72,94 +171,97 @@
                 </button>
                 <div class="human-chi"></div>
             </div>
-            
+
         </nav>
-        <div class="body-chi">
-            <div class="body-t-chi">
-                <h2>Products</h2>
-                Dashboard / Products
-                <br>
-                <br>
+        <div class="bbody-chi">
+            <div class="body-chi">
+                <div class="body-t-chi">
+                    <h2>Order List</h2>
+                    <div class="f1 ff">Dashboard &nbsp </div>
+                    <div class="ff">/ &nbsp Order List</div>
+                    <br>
+                    <br>
 
-                <button type="button" class="btn btn-success">Success</button>
-                <nav class="navbar bg-body-tertiary">
-                    <form class="container-fluid">
-
-                        <div class="input-group">
-                            <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
-                            <input type="text" class="form-control" placeholder="Search" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                    <!-- search & dropdown -->
+                    <div class="sd border border-bottom-0 shadow-sm rounded-top-4">
+                        <form class="container-fluid p-2 ">
+                            <div class="input-group ">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        </nav>
+                        <div class="dropdown">
+                            <button class="btn btn-white border dropdown-toggle col-12 chev" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Success
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatus</a></li>
+                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSuccess</a></li>
+                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPending</a></li>
+                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCancel</a></li>
+                            </ul>
                         </div>
-                    </form>
-                </nav>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown button
-                    </button>
-                    <ul class="dropdown-menu w-100">
-                        <li><a class="dropdown-item" href="#">Status</a></li>
-                        <li><a class="dropdown-item" href="#">Success</a></li>
-                        <li><a class="dropdown-item" href="#">Pending</a></li>
-                        <li><a class="dropdown-item" href="#">Cancel</a></li>
-                    </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="box-m-chi">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled"
-                        disabled>
-                    <label class="form-check-label" for="flexCheckIndeterminateDisabled">
-                        Disabled indeterminate checkbox
-                    </label>
+                <div class="box-m-chi border border-top-0 shadow-sm ">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &nbsp;Image
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-                    <label class="form-check-label" for="flexCheckDisabled">
-                        Disabled checkbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked
-                        disabled>
-                    <label class="form-check-label" for="flexCheckCheckedDisabled">
-                        Disabled checked checkbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-                    <label class="form-check-label" for="flexCheckDisabled">
-                        Disabled checkbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-                    <label class="form-check-label" for="flexCheckDisabled">
-                        Disabled checkbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-                    <label class="form-check-label" for="flexCheckDisabled">
-                        Disabled checkbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-                    <label class="form-check-label" for="flexCheckDisabled">
-                        Disabled checkbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-                    <label class="form-check-label" for="flexCheckDisabled">
-                        Disabled checkbox
-                    </label>
-                </div>
-            </div>
-            <div class="body-b-chi">
+                <!-- <div class="row"> -->
+                <div class="body-b-chi border-top col-md border rounded-bottom-4">
+                
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination">
+                    <ul class="pagination ">
+                        <span>Showing 1 to 8 of 12 entries</span>
                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -168,14 +270,14 @@
                     </ul>
                 </nav>
             </div>
+            </div>
         </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script src="./FreshCart-2.Js"></script>
+    <script src="FreshCart-2.Js"></script>
     <script>
 
     </script>
