@@ -114,14 +114,18 @@ li {
 .offcanvas-start.show {
     width: 247px!important;
     overflow-x: hidden;
-
+}
+.offcanvas {
+    --bs-offcanvas-width: 247px;
 }
 .nav-item{
     display: flex;
     flex-wrap: nowrap;
-   
     position: relative;
 }
+/* .dropdown-item.d-flex {
+    background-color: (206, 239, 206)
+} */
 
 .nav-link-1 {
     position: absolute;
@@ -305,7 +309,7 @@ a.dropdown-item1 {
     transform: rotate(90deg);
     transition: transform 0.3s ease;
     position: absolute;
-    right: -200px;
+    left: 180px;
     top: 5px;
     cursor: pointer;
 }
