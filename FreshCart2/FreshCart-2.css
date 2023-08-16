@@ -52,6 +52,7 @@
 
 li.nav-item {
     position: relative;
+    padding: 20px 0px;
 }
 
 
@@ -136,9 +137,9 @@ li {
 
 .nav-link-2 {
 
-    bottom: 4px;
+    /* bottom: 4px;
     left: -6px;
-    position: absolute;
+    position: absolute; */
     text-decoration: none;
     color: #889397;
 }
@@ -267,8 +268,6 @@ botton.dropdown-menu{
 
 a.dropdown-item {
     padding: 0;
-    position: absolute;
-    left: 25px;
 }
 
 a.dropdown-item1 {
@@ -293,9 +292,9 @@ a.dropdown-item1 {
     cursor: pointer;
 }
 .chev1 {
-    position: absolute;
+    /* position: absolute;
     top: -25px;
-    margin-left: 5px;
+    margin-left: 5px; */
     cursor: pointer;
 }
 .chev1::after {
@@ -321,4 +320,21 @@ a.dropdown-item1 {
 
 ::-webkit-scrollbar-thumb {
 background-color: #6af06a;
+}
+
+/* check list 圖片 */
+.p1 {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* 表格 */
+th {
+    word-wrap:break-word;
+    color: rgb(92, 108, 117)!important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px!important;
+    display: table-cell;
 }
