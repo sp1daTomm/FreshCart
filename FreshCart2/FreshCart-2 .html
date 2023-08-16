@@ -204,56 +204,197 @@
                     </div>
                 </div>
                 <div class="box-m-chi border border-top-0 shadow-sm overflow-x-scroll">
-                    <table class="table ">
+                    <table class="table">
                         <thead>
                             <tr>
-                                <th ><input class="form-check-input col-1" type="checkbox" value="" id="flexCheckDefault"></th>
-                                <th ><label class="form-check-label col-1" for="flexCheckDefault">Image</label></th>
-                                <th class="col-2">OrderName</th>
-                                <th class="col-2">Customer</th>
-                                <th class="col-3">Date & Time</th>
-                                <th class="col-1">Payment</th>
-                                <th class="col-1">Status</th>
-                                <th class="col-1">Amount</th>
-                                <th class="col-1"></th>
+                                <th><input class="form-check-input col-1" type="checkbox" value=""
+                                        id="flexCheckDefault"></th>
+                                <th><label class="form-check-label col-1 row" for="flexCheckDefault">Image</label></th>
+                                <th class="th-chi col-2">OrderName</th>
+                                <th class="th-chi col-2">Customer</th>
+                                <th class="th-chi col-3">Date&Time</th>
+                                <th class="th-chi col-1">Payment</th>
+                                <th class="th-chi col-1">Status</th>
+                                <th class="th-chi col-1">Amount</th>
+                                <th class="th-chi col-1"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value=""
+                                        id="flexCheckChecked" checked></th>
+                                <td><label class="form-check-label" for="flexCheckChecked"><img class="p1"
+                                            src="https://freshcart.codescandy.com/assets/images/products/product-img-1.jpg" 
+                                            alt="">
+                                    </label></td>
+                                <td>FC#1007</td>
+                                <td>Jennifer Sullivan</td>
+                                <td>01 May 2023 (10:12 am)</td>
+                                <td>Paypal</td>
+                                <td>Success</td>
+                                <td>$12.99</td>
+                                <td><div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class="bi bi-three-dots-vertical"></i>  
+                                  </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i>Delete</a></li>
+                                      <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>Edit</a></li>
+                                    </ul>
+                                  </div></td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckChecked" checked></th>
+                            <td><label class="form-check-label" for="flexCheckChecked"><img class="p1"
+                                        src="https://freshcart.codescandy.com/assets/images/products/product-img-2.jpg"
+                                        alt="">
+                                </label></td>
+                            <td>FC#1006</td>
+                            <td>Willie Hanson</td>
+                            <td>20 April 2023 (9:20 am)</td>
+                            <td>COD</td>
+                            <td>Success</td>
+                            <td>$8.19</td>
+                            <td><div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="bi bi-three-dots-vertical"></i>  
+                              </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i>Delete</a></li>
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>Edit</a></li>
+                                </ul>
+                              </div></td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckChecked" checked></th>
+                            <td><label class="form-check-label" for="flexCheckChecked"><img class="p1"
+                                        src="https://freshcart.codescandy.com/assets/images/products/product-img-3.jpg"
+                                        alt="">
+                                </label></td>
+                            <td>FC#1005</td>
+                            <td>Dori Stewart</td>
+                            <td>11 March 2023 (7:12 pm)</td>
+                            <td>Paypal</td>
+                            <td>Pending</td>
+                            <td>$8.19</td>
+                            <td><div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="bi bi-three-dots-vertical"></i>  
+                              </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i>Delete</a></li>
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>Edit</a></li>
+                                </ul>
+                              </div></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckChecked" checked></th>
+                            <td><label class="form-check-label" for="flexCheckChecked"><img class="p1"
+                                        src="https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg"
+                                        alt="">
+                                </label></td>
+                            <td>FC#1004</td>
+                            <td>Ezekiel Rogerson</td>
+                            <td>09 March 2023 (6:23 pm)</td>
+                            <td>Stripe</td>
+                            <td>Success</td>
+                            <td>$23.11</td>
+                            <td><div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="bi bi-three-dots-vertical"></i>  
+                              </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i>Delete</a></li>
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>Edit</a></li>
+                                </ul>
+                              </div></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckChecked" checked></th>
+                            <td><label class="form-check-label" for="flexCheckChecked"><img class="p1"
+                                        src="https://freshcart.codescandy.com/assets/images/products/product-img-5.jpg"
+                                        alt="">
+                                </label></td>
+                            <td>FC#1003</td>
+                            <td>Maria Roux</td>
+                            <td>18 Feb 2022 (12:20 pm)</td>
+                            <td>COD</td>
+                            <td>Success</td>
+                            <td>$2.00</td>
+                            <td><div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="bi bi-three-dots-vertical"></i>  
+                              </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i>Delete</a></li>
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>Edit</a></li>
+                                </ul>
+                              </div></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckChecked" checked></th>
+                            <td><label class="form-check-label" for="flexCheckChecked"><img class="p1"
+                                        src="https://freshcart.codescandy.com/assets/images/products/product-img-6.jpg"
+                                        alt="">
+                                </label></td>
+                            <td>FC#1002</td>
+                            <td>Robert Donald</td>
+                            <td>12 Feb 2022 (4:56 pm)</td>
+                            <td>Paypal</td>
+                            <td>Cancel</td>
+                            <td>$56.00</td>
+                            <td><div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="bi bi-three-dots-vertical"></i>  
+                              </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i>Delete</a></li>
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>Edit</a></li>
+                                </ul>
+                              </div></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckChecked" checked></th>
+                            <td><label class="form-check-label" for="flexCheckChecked"><img class="p1"
+                                        src="https://freshcart.codescandy.com/assets/images/products/product-img-7.jpg"
+                                        alt="">
+                                </label></td>
+                            <td>FC#1001</td>
+                            <td>Diann Watson</td>
+                            <td>22 Jan 2023 (1:20 pm)</td>
+                            <td>Paypal</td>
+                            <td>Success</td>
+                            <td>$23.00</td>
+                            <td><div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="bi bi-three-dots-vertical"></i>  
+                              </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i>Delete</a></li>
+                                  <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>Edit</a></li>
+                                </ul>
+                              </div></td>
                             </tr>
                         </tbody>
                     </table>
 
-                    
-                    <ul class="form-check">
+
+                    <!-- <ul class="form-check">
                         <li>
-                            
+
                         </li>
                         <li>
-                            
+
                         </li>
                     </ul>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label" for="flexCheckChecked"><img class="p1"
-                                src="https://freshcart.codescandy.com/assets/images/products/product-img-1.jpg" alt="">
-                            Checked checkbox
-                        </label>
+
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -298,7 +439,7 @@
                             Checked checkbox
                         </label>
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="row"> -->
                 <div class="body-b-chi border-top col-md border rounded-bottom-4">
 

@@ -8,6 +8,8 @@
 
 .navbar {
     background-color: rgb(255, 255, 255,0.8)!important;
+    filter: blur();
+    
 }
 
 /* 綠字 */
@@ -337,4 +339,15 @@ th {
     font-weight: 600;
     padding: 12px 24px!important;
     display: table-cell;
+}
+
+/* 表格dropdown after  */
+
+.dropdown-toggle:after {
+    /* content:''; */
+    border: none;
+}
+
+.th-chi{
+    background-color: rgb(223, 226, 225)!important;
 }
