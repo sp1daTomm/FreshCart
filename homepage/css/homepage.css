@@ -57,8 +57,20 @@
 }
 
 .search-fu {
-    width: 494px;
+    width: 345px;
     padding: 8px 16px;
+}
+
+@media (min-width: 1200px) {
+    .search-fu{
+        width: 420px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .search-fu{
+        width: 494px;
+    }
 }
 
 .search-size-fu {

@@ -115,8 +115,9 @@ function product1(){
     minute1.innerText = `${minute1}Mins`;
     second1.innerText = `${second1}Secs`;
     all=[realDate1,hour1,minute1,second1];
-    // console.log(all);
-    // console.log(realDate1.innerHTML);
+    console.log(all);
+    // console.log(`${realDate1}Days`);
+    return realDate1.innerHTML;
 }
 
 
