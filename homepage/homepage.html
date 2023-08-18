@@ -57,7 +57,7 @@
                 <!-- logo結束 -->
 
                 <!-- 搜尋欄開始 -->
-                <nav class="navbar bg-body ps-5">
+                <nav class="navbar bg-body ps-5 d-none d-lg-block">
                     <div class="container-fluid">
                         <form class="d-flex" role="search">
                             <span class="position-relative">
@@ -79,7 +79,7 @@
             <div class="d-flex justify-content-center align-items-center">
 
                 <!-- 小icon的愛心 -->
-                <div class="position-relative">
+                <div class="d-none d-lg-block position-relative">
                     <img src="./img/head/love.png" alt="" class="nav-size-fu me-3">
                     <span
                         class="position-absolute top-0 start-50 translate-middle bg-success rounded-circle red-round-fu text-center">
@@ -336,7 +336,7 @@
 
 
                 <!-- 小icon的list -->
-                <button class=" p-0 border-0 bg-body" type="button" data-bs-toggle="offcanvas"
+                <button class="d-block d-lg-none p-0 border-0 bg-body" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasList" aria-controls="offcanvasList">
                     <img src="./img/head/list.png" alt="" class="nav-size-fu">
                 </button>
@@ -662,7 +662,7 @@
         <!-- logo-nav結束 -->
 
         <!-- 一群hover開始 -->
-        <div class="container d-flex mb-3">
+        <div class="container d-flex mb-3 d-none d-lg-flex">
 
             <!-- All Departments開始 -->
             <div class="dropdown">
@@ -871,8 +871,8 @@
 
             <!-- Docs開始 -->
             <div class="dropdown">
-                <button class="btn dropdown-toggle fs-14p-fu pt-2 pb-2 ps-2 pe-2 ms-2 fw-bold" type="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn fs-14p-fu pt-2 pb-2 ps-2 pe-2 ms-2 fw-bold" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     Docs
                 </button>
                 <ul class="dropdown-menu">
@@ -1003,26 +1003,29 @@
         <!-- Featured Categories結束 -->
 
         <!-- 兩張圖片開始 -->
-        <div class="container d-flex justify-content-between">
-            <div class="col-6">
-                <div class="position-relative">
-                    <img src="./img/Featured_Categories/grocery-banner.png" alt="" class="featured-twoimg-size-fu">
-                    <div class="position-absolute featured-twoimg-posi-fu">
-                        <div class="fs-24_5p-fu fw-bold ">Fruits & Vegetables</div>
-                        <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 30% Off</div>
-                        <br>
-                        <button type="button" class="btn btn-dark">Shop Now</button>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-6">
+                    <div class="position-relative">
+                        <img src="./img/Featured_Categories/grocery-banner.png" alt="" class="featured-twoimg-size-fu">
+                        <div class="position-absolute featured-twoimg-posi-fu">
+                            <div class="fs-24_5p-fu fw-bold ">Fruits & Vegetables</div>
+                            <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 30% Off</div>
+                            <br>
+                            <button type="button" class="btn btn-dark">Shop Now</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="d-flex justify-content-end position-relative mb-5">
-                    <img src="./img/Featured_Categories/grocery-banner-2.jpg" alt="" class="featured-twoimg-size-fu">
-                    <div class="position-absolute featured-twoimg-posi-fu ms-3">
-                        <div class="fs-24_5p-fu fw-bold ">Freshly Baked Buns</div>
-                        <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 25% Off</div>
-                        <br>
-                        <button type="button" class="btn btn-dark">Shop Now</button>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex justify-content-end position-relative mb-5">
+                        <img src="./img/Featured_Categories/grocery-banner-2.jpg" alt=""
+                            class="featured-twoimg-size-fu">
+                        <div class="position-absolute featured-twoimg-posi-fu ms-3">
+                            <div class="fs-24_5p-fu fw-bold ">Freshly Baked Buns</div>
+                            <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 25% Off</div>
+                            <br>
+                            <button type="button" class="btn btn-dark">Shop Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1032,7 +1035,7 @@
         <!-- Popular Products開始 -->
         <div class="container mt-3">
             <div class="fw-bold fs-24_5p-fu mb-3">Popular Products</div>
-            <div class="d-flex row-cols-5 flex-wrap w-100 mb-3 justify-content-between">
+            <div class="d-flex row-cols-2 row-cols-md-3 row-cols-lg-5 flex-wrap w-100 mb-3 justify-content-between">
 
                 <!-- 第一件 -->
                 <div class="col p-1">
@@ -1304,60 +1307,61 @@
         <!-- Daily Best Sells開始 -->
         <div class="container mt-3">
             <div class="fw-bold fs-24_5p-fu mb-3 mt-5">Daily Best Sells</div>
-            <div class="d-flex w-100">
+            <div class="row w-100 p-0 m-0">
 
-                <!-- 第一件 -->
-                <div class="card col">
-                    <img src="./img/Daily_Best_Sells/banner-deal.jpg" class="card-img-top position-relative" alt="">
-                    <div class="position-absolute mt-4 ms-3">
-                        <div class="fs-24_5p-fu fw-bold text-white">100% Organic Coffee Beans.</div>
-                        <div class="fs-14 text-white mb-3">Get the best deal before close.</div>
-                        <a href="#" class="btn btn-success text-center">Shop Now -></a>
-                    </div>
-                </div>
-
-                <!-- 第二件 -->
-                <div class="card col ms-3">
-                    <img src="./img/Daily_Best_Sells/product-img-11.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <div class="fs-12p-fu text-body-secondary">Tea, Coffee & Drinks</div>
-                        <a href="#"
-                            class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Roast
-                            Ground Coffee</a>
-                        <div class="mb-2 d-flex justify-content-between">
-                            <div>
-                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
-                            </div>
-                            <div>
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
-                                <span class="fs-12_25p-fu text-body-secondary">4.5</span>
-                            </div>
+                <div class=" overflow-x-auto row">
+                    <!-- 第一件 -->
+                    <div class="card col-12 col-md-6 col-lg-3 p-0">
+                        <img src="./img/Daily_Best_Sells/banner-deal.jpg" class="card-img-top position-relative" alt="">
+                        <div class="position-absolute mt-4 ms-3">
+                            <div class="fs-24_5p-fu fw-bold text-white">100% Organic Coffee Beans.</div>
+                            <div class="fs-14 text-white mb-3">Get the best deal before close.</div>
+                            <a href="#" class="btn btn-success text-center">Shop Now -></a>
                         </div>
-                        <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
-                        <div class="row">
-                            <div class="card col m-1">
-                                <div class="card-body fs-13p-fu text-body-tertiary" id="realDate1">
-                                    Days
-                                </div>
-                            </div>
-                            <div class="card col m-1">
-                                <div class="card-body">
-                                    <span class="fs-13p-fu text-body-tertiary" id="hour1">Hours</span>
+                    </div>
 
+                    <!-- 第二件 -->
+                    <div class="card col-12 col-md-6 col-lg-3 p-0">
+                        <img src="./img/Daily_Best_Sells/product-img-11.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="fs-12p-fu text-body-secondary">Tea, Coffee & Drinks</div>
+                            <a href="#"
+                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Roast
+                                Ground Coffee</a>
+                            <div class="mb-2 d-flex justify-content-between">
+                                <div>
+                                    <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                                </div>
+                                <div>
+                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                    <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                    <span class="fs-12_25p-fu text-body-secondary">4.5</span>
                                 </div>
                             </div>
-                            <div class="card col m-1">
-                                <div class="card-body fs-13p-fu text-body-tertiary" id="minute1">
-                                    Mins
+                            <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
+                            <div class="row">
+                                <div class="card col m-1">
+                                    <div class="card-body fs-13p-fu text-body-tertiary" id="realDate1">
+                                        Days
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card col m-1">
-                                <div class="card-body fs-13p-fu text-body-tertiary" id="second1">
-                                    Secs
+                                <div class="card col m-1">
+                                    <div class="card-body">
+                                        <span class="fs-13p-fu text-body-tertiary" id="hour1">Hours</span>
+                                    </div>
+                                </div>
+                                <div class="card col m-1">
+                                    <div class="card-body fs-13p-fu text-body-tertiary" id="minute1">
+                                        Mins
+                                    </div>
+                                </div>
+                                <div class="card col m-1">
+                                    <div class="card-body fs-13p-fu text-body-tertiary" id="second1">
+                                        Secs
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1365,7 +1369,7 @@
                 </div>
 
                 <!-- 第三件 -->
-                <div class="card col ms-3">
+                <div class="card col-12 col-md-6 col-lg-3 p-0">
                     <img src="./img/Daily_Best_Sells/product-img-12.jpg" class="card-img-top" alt="">
                     <div class="card-body">
                         <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
@@ -1390,7 +1394,7 @@
                 </div>
 
                 <!-- 第四件 -->
-                <div class="card col ms-3">
+                <div class="card col-12 col-md-6 col-lg-3 p-0">
                     <img src="./img/Daily_Best_Sells/product-img-13.jpg" class="card-img-top" alt="">
                     <div class="card-body">
                         <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
@@ -1418,42 +1422,45 @@
         <!-- Daily Best Sells結束 -->
 
         <!-- 各種說明開始 -->
-        <div class="d-flex justify-content-around container mt-5 mb-5">
-            <div class="col-12 col-md-6 col-lg-3 p-3">
-                <div class="card-body">
-                    <img src="./img/up_of_footer/clock.svg" alt="" class="mb-4">
-                    <h5 class="card-title fs-17_5p-fu mb-2">10 minute grocery now</h5>
-                    <p class="card-text fs-14p-fu">Get your order delivered to your doorstep at the earliest from
-                        FreshCart pickup
-                        stores near you.</p>
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 p-3">
+                    <div class="card-body">
+                        <img src="./img/up_of_footer/clock.svg" alt="" class="mb-4">
+                        <h5 class="card-title fs-17_5p-fu mb-2">10 minute grocery now</h5>
+                        <p class="card-text fs-14p-fu">Get your order delivered to your doorstep at the earliest from
+                            FreshCart pickup
+                            stores near you.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 p-3">
-                <div class="card-body">
-                    <img src="./img/up_of_footer/gift.svg" alt="" class="mb-4">
-                    <h5 class="card-title fs-17_5p-fu mb-2">Best Prices & Offers</h5>
-                    <p class="card-text fs-14p-fu">Cheaper prices than your local supermarket, great cashback offers to
-                        top it off. Get best pricess & offers.</p>
+                <div class="col-12 col-md-6 col-lg-3 p-3">
+                    <div class="card-body">
+                        <img src="./img/up_of_footer/gift.svg" alt="" class="mb-4">
+                        <h5 class="card-title fs-17_5p-fu mb-2">Best Prices & Offers</h5>
+                        <p class="card-text fs-14p-fu">Cheaper prices than your local supermarket, great cashback offers
+                            to
+                            top it off. Get best pricess & offers.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 p-3">
-                <div class="card-body">
-                    <img src="./img/up_of_footer/package.svg" alt="" class="mb-4">
-                    <h5 class="card-title fs-17_5p-fu mb-2">Wide Assortment</h5>
-                    <p class="card-text fs-14p-fu">Choose from 5000+ products across food, personal care, household,
-                        bakery, veg and non-veg & other categories.</p>
+                <div class="col-12 col-md-6 col-lg-3 p-3">
+                    <div class="card-body">
+                        <img src="./img/up_of_footer/package.svg" alt="" class="mb-4">
+                        <h5 class="card-title fs-17_5p-fu mb-2">Wide Assortment</h5>
+                        <p class="card-text fs-14p-fu">Choose from 5000+ products across food, personal care, household,
+                            bakery, veg and non-veg & other categories.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 p-3">
-                <div class="card-body">
-                    <img src="./img/up_of_footer/refresh-cw.svg" alt="" class="mb-4">
-                    <h5 class="card-title fs-17_5p-fu mb-2">Easy Returns
-                    </h5>
-                    <p class="card-text fs-14p-fu">Not satisfied with a product? Return it at the doorstep & get a
-                        refund within hours. No questions asked<span>
-                            <a href=""
-                                class="text-success link-offset-2 link-underline link-underline-opacity-0">policy</a></span>.
-                    </p>
+                <div class="col-12 col-md-6 col-lg-3 p-3">
+                    <div class="card-body">
+                        <img src="./img/up_of_footer/refresh-cw.svg" alt="" class="mb-4">
+                        <h5 class="card-title fs-17_5p-fu mb-2">Easy Returns
+                        </h5>
+                        <p class="card-text fs-14p-fu">Not satisfied with a product? Return it at the doorstep & get a
+                            refund within hours. No questions asked<span>
+                                <a href=""
+                                    class="text-success link-offset-2 link-underline link-underline-opacity-0">policy</a></span>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1470,7 +1477,7 @@
             <!-- 各種a連結開始 -->
             <div class="row border-bottom">
 
-                <div class="fw-bold col-2 fs-14p-fu">
+                <div class="fw-bold col-6 col-lg-2 mb-4 fs-14p-fu">
                     Categories
                     <div class="mt-4">
                         <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
@@ -1503,7 +1510,7 @@
                     </div>
                 </div>
 
-                <div class="fw-bold col-2 fs-14p-fu">
+                <div class="fw-bold col-6 col-lg-2 mb-4 fs-14p-fu">
                     &nbsp;
                     <div class="mt-4">
                         <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
@@ -1536,7 +1543,7 @@
                     </div>
                 </div>
 
-                <div class="fw-bold col-2 fs-14p-fu">
+                <div class="fw-bold col-6 col-md-3 col-lg-2 mb-4 fs-14p-fu">
                     Get to know us
                     <div class="mt-4">
                         <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
@@ -1557,7 +1564,7 @@
                     </div>
                 </div>
 
-                <div class="fw-bold col-2 fs-14p-fu">
+                <div class="fw-bold col-6 col-md-3 col-lg-2 mb-4 fs-14p-fu">
                     For Consumers
                     <div class="mt-4">
                         <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
@@ -1578,7 +1585,7 @@
                     </div>
                 </div>
 
-                <div class="fw-bold col-2 fs-14p-fu">
+                <div class="fw-bold col-6 col-md-3 col-lg-2 mb-4 fs-14p-fu">
                     Become a Shopper
                     <div class="mt-4">
                         <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
@@ -1599,7 +1606,7 @@
                     </div>
                 </div>
 
-                <div class="fw-bold col-2 fs-14p-fu">
+                <div class="fw-bold col-6 col-md-3 col-lg-2 mb-4 fs-14p-fu">
                     Freshcart programs
                     <div class="mt-4">
                         <div class="fw-bold text-body-tertiary fs-14p-fu mb-2">
@@ -1624,8 +1631,8 @@
             <!-- 各種a連結結束 -->
 
             <!-- 信用卡+商店連結開始 -->
-            <div class=" d-flex border-bottom justify-content-between pt-3 pb-3">
-                <div class="d-flex align-items-center">
+            <div class="row border-bottom justify-content-center pt-3 pb-3">
+                <div class="d-flex align-items-center justify-content-center col-12 col-lg-6 justify-content-lg-start">
                     <span class="fs-14p-fu fw-bold me-2">Payment Partners</span>
                     <img src="./img/footer/amazonpay.svg" class="me-2" alt="">
                     <img src="./img/footer/american-express.svg" class="me-2" alt="">
@@ -1633,7 +1640,7 @@
                     <img src="./img/footer/paypal.svg" class="me-2" alt="">
                     <img src="./img/footer/visa.svg" alt="">
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center justify-content-center col-12 col-lg-6 justify-content-lg-end">
                     <span class="fs-14p-fu fw-bold me-2 me-2">Get deliveries with FreshCart</span>
                     <img src="./img/footer/appstore-btn.svg" class="me-2" alt="">
                     <img src="./img/footer/googleplay-btn.svg" alt="">
@@ -1642,13 +1649,13 @@
             <!-- 信用卡+商店連結結束 -->
 
             <!-- 提及開始 -->
-            <div class="d-flex justify-content-between mt-3">
-                <div class="fs-12_25p-fu text-body-tertiary fw-bold">
+            <div class="row justify-content-between mt-3">
+                <div class="fs-12_25p-fu text-body-tertiary fw-bold col-md-6 col-12">
                     © 2022 - 2023 FreshCart eCommerce HTML Template. All rights reserved. Powered by <span>
                         <a href=""
                             class="text-success link-offset-2 link-underline link-underline-opacity-0">Codescandy</a></span>
                     .</div>
-                <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-md-end align-items-center col-12  col-md-6">
                     <span class="fs-12_25p-fu text-body-tertiary me-2 fw-bold">Follow us on</span>
                     <span
                         class="opacity-75 border rounded footer-border-size d-flex justify-content-center align-items-center me-2">
