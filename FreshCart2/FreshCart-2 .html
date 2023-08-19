@@ -18,7 +18,7 @@
 
 <body>
     <div class="main-chi">
-        <nav class="navbar bg-body-tertiary fixed-top align-items-start">
+        <nav class="navbar bg-body-tertiary fixed-top align-items-start col-md-12 visible-xl">
             <div class="nav-func-chi">
                 <div class="container-fluid d-flex">
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
@@ -94,7 +94,7 @@
                                     <a class="nav-link-1 active" aria-current="page" href="#">Reviews</a>
                                 </li>
 
-                                <li class="span-fs">Site Setting <span class="blue-b">Coming Soon</span></li>
+                                <li class="span-fs">Site Setting <span id="blue-b" class="brick">Coming Soon</span></li>
 
                                 <li class="nav-item">
                                     <i class="bi bi-newspaper"></i>
@@ -111,7 +111,7 @@
                                     <a class="nav-link-1 active" aria-current="page">Store Setting</a>
                                 </li>
 
-                                <li class="span-fs">Support <span class="blue-b">Coming Soon</span></li>
+                                <li class="span-fs">Support <span id="blue-b" class="brick">Coming Soon</span></li>
 
                                 <li class="nav-item">
                                     <i class="bi bi-headphones"></i>
@@ -161,8 +161,8 @@
             </div>
 
         </nav>
-        <div class="bbody-chi">
-            <div class="body-chi">
+        <div class="bbody-chi row">
+            <div class="body-chi col-xl-12 col-lg-8 col-md-8 col-sm-8">
                 <div class="body-t-chi">
                     <h2>Order List</h2>
                     <div class="f1 ff">Dashboard &nbsp </div>
@@ -184,10 +184,10 @@
                                 Success
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatus</a></li>
-                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSuccess</a></li>
-                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPending</a></li>
-                                <li><a class="dropdown-item1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCancel</a></li>
+                                <li><a class="dropdown-item1 ps-4" href="#">Status</a></li>
+                                <li><a class="dropdown-item1 ps-4" href="#">Success</a></li>
+                                <li><a class="dropdown-item1 ps-4" href="#">Pending</a></li>
+                                <li><a class="dropdown-item1 ps-4" href="#">Cancel</a></li>
                             </ul>
                         </div>
                     </div>
@@ -220,7 +220,7 @@
                                 <td>Jennifer Sullivan</td>
                                 <td>01 May 2023 (10:12 am)</td>
                                 <td>Paypal</td>
-                                <td>Success</td>
+                                <td><span class="brick" id="green-b">Success</span></td>
                                 <td>$12.99</td>
                                 <td>
                                     <div class="dropdown">
@@ -248,7 +248,7 @@
                                 <td>Willie Hanson</td>
                                 <td>20 April 2023 (9:20 am)</td>
                                 <td>COD</td>
-                                <td>Success</td>
+                                <td ><span class="brick" id="green-b">Success</span></td>
                                 <td>$8.19</td>
                                 <td>
                                     <div class="dropdown">
@@ -276,7 +276,7 @@
                                 <td>Dori Stewart</td>
                                 <td>11 March 2023 (7:12 pm)</td>
                                 <td>Paypal</td>
-                                <td>Pending</td>
+                                <td><span class="brick" id="yellow-b">Pending</span></td>
                                 <td>$8.19</td>
                                 <td>
                                     <div class="dropdown">
@@ -304,7 +304,7 @@
                                 <td>Ezekiel Rogerson</td>
                                 <td>09 March 2023 (6:23 pm)</td>
                                 <td>Stripe</td>
-                                <td>Success</td>
+                                <td><span class="brick" id="green-b">Success</span></td>
                                 <td>$23.11</td>
                                 <td>
                                     <div class="dropdown">
@@ -332,7 +332,7 @@
                                 <td>Maria Roux</td>
                                 <td>18 Feb 2022 (12:20 pm)</td>
                                 <td>COD</td>
-                                <td>Success</td>
+                                <td><span class="brick" id="green-b">Success</span></td>
                                 <td>$2.00</td>
                                 <td>
                                     <div class="dropdown">
@@ -360,7 +360,7 @@
                                 <td>Robert Donald</td>
                                 <td>12 Feb 2022 (4:56 pm)</td>
                                 <td>Paypal</td>
-                                <td>Cancel</td>
+                                <td><span class="brick" id="red-b">Cancel</span></td>
                                 <td>$56.00</td>
                                 <td>
                                     <div class="dropdown">
@@ -388,7 +388,7 @@
                                 <td>Diann Watson</td>
                                 <td>22 Jan 2023 (1:20 pm)</td>
                                 <td>Paypal</td>
-                                <td>Success</td>
+                                <td><span class="brick" id="green-b">Success</span></td>
                                 <td>$23.00</td>
                                 <td>
                                     <div class="dropdown">
@@ -408,7 +408,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="body-b-chi border-top-0  rounded-bottom-4 d-flex flex-justify-content-md-start flex-md-row shadow-sm">
+                <div class="body-b-chi border-top-0  rounded-bottom-4  d-flex flex-md-row justify-content-md-between    flex-sm-row ">
 
                     <span class="pps d-inline-block">Showing 1 to 8 of 12 entries</span>
                     <nav aria-label="Page navigation example">
