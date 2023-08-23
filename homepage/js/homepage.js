@@ -99,10 +99,19 @@ function nowTime(){
 // 相差天數=(年相差*365天)+(月相差*30天)+日相差 
 
 let realDate1 = document.querySelector('#realDate1');
-console.log(realDate1);
 let hour1 = document.querySelector('#hour1');
 let minute1 = document.querySelector('#minute1');
 let second1 = document.querySelector('#second1');
+
+let realDate2 = document.querySelector('#realDate2');
+let hour2 = document.querySelector('#hour2');
+let minute2 = document.querySelector('#minute2');
+let second2 = document.querySelector('#second2');
+
+let realDate3 = document.querySelector('#realDate3');
+let hour3 = document.querySelector('#hour3');
+let minute3 = document.querySelector('#minute3');
+let second3 = document.querySelector('#second3');
 
 setInterval(product1,1000);
 function product1(){
@@ -112,25 +121,36 @@ function product1(){
     let minute11 = 59 - minute;
     let second11 = 60 - second;
 
-    realDate1.innerText = `${realDate11}Days`;
-    hour1.innerText = `${hour11}Hours`;
-    minute1.innerText = `${minute11}Mins`;
-    second1.innerText = `${second11}Secs`;
-    all=[realDate11,hour11,minute11,second11];
-    console.log(all);
-    // console.log(`${realDate1}Days`);
-    return realDate1.innerHTML;
+    realDate1.innerText = realDate11;
+    hour1.innerText = hour11;
+    minute1.innerText = minute11;
+    second1.innerText = second11;
 }
 
-// cardRergion.innerHTML += `<div class="card">
-//                 <div class="city">${i}</div>
-//                 <div>${cityData.wxcondition}</div>
-//                 <div>降雨機率：${cityData.pop}%</div>
-//                 <div>最低溫度：${cityData.minT}c</div>
-//                 <div>最高溫度：${cityData.maxT}c</div>
-//                 <div>${cityData.ci}</div>
-//                 <div>${cityData.startTime}</div>
-//                 <div>至</div>
-//                 <div>${cityData.endTime}</div>
-//                 </div>`
-// });
+setInterval(product2,1000);
+function product2(){
+    nowTime();
+    let realDate22 = ((2027 - year) * 365) + ((23 - month) * 30) + (38 - date);
+    let hour22 = 23 - hour;
+    let minute22 = 59 - minute;
+    let second22 = 60 - second;
+
+    realDate2.innerText = realDate22;
+    hour2.innerText = hour22;
+    minute2.innerText = minute22;
+    second2.innerText = second22;
+}
+
+setInterval(product3,1000);
+function product3(){
+    nowTime();
+    let realDate33 = ((2027 - year) * 365) + ((22 - month) * 30) + (40 - date);
+    let hour33 = 23 - hour;
+    let minute33 = 59 - minute;
+    let second33 = 60 - second;
+
+    realDate3.innerText = realDate33;
+    hour3.innerText = hour33;
+    minute3.innerText = minute33;
+    second3.innerText = second33;
+}
