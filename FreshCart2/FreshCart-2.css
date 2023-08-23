@@ -8,6 +8,7 @@
 
 .navbar {
     background-color: rgb(255, 255, 255,0.8)!important;
+    padding: 16px;
    
     /* text-align: center; */
 }
@@ -101,12 +102,9 @@ li {
 }
 
 .offcanvas-title {
-    width: 160px;
-    height: 30px;
     /* background-image: url(https://freshcart.codescandy.com/assets/images/logo/freshcart-logo.svg); */
     background-color: white;
     background-size: cover;
-
 }
 
 .btn-close {
@@ -174,6 +172,7 @@ li {
 } */
 .b-main-chi{
     height: 100vh;
+    margin: 0 auto!important;
 }
 .main-chi {
     height: 100vh;
@@ -410,6 +409,12 @@ table.myFormat tr td  {
     margin-right:0.25rem;
     color:#889397
 }
+.page-item:not(:first-child):active .page-link:active {
+    color: white;
+    background-color: #0aad0a;
+    background-color: #0aad0a;
+}
+
 .pp {
     background-color:#ecf0ef;
     color: rgb(92, 108, 117)!important;
@@ -421,13 +426,21 @@ table.myFormat tr td  {
     color:rgb(92, 108, 117);
     font-weight: 500;
 }
-/* 
-@media (max-width: 1200px) {
-    .offcanvas-start.show {
-        display: block;
+
+@media (min-width: 1200px) {
+    .offcanvas-body{
+        border-right: 2px dotted rgb(223, 226, 225);
+        overflow-y: scroll;
     }
-    .offcanvas-body {
-        display: block;
+    .offcanvas-header{
+        border-right: 1px dotted rgb(223, 226, 225);
     }
-    
-} */
+  
+    .navbar {
+        width: calc(100% - 247px);
+        margin-left: 260px;
+    }
+    .offcanvas-title {
+        margin-left: -20px;
+    }
+}
