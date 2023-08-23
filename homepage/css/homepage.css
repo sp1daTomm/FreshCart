@@ -91,16 +91,16 @@
     color: #0AAD0A;
 }
 
-.featured-twoimg-size-fu {
-    width: 97.5%;
-    background-size: contain;
-    background-position: center;
-    height: 200px;
+.featured-swiper1{
+    background: url(../img/Featured_Categories/grocery-banner.png);
+    background-position: start;
+    background-size: cover;
 }
 
-.featured-twoimg-posi-fu {
-    top: 20%;
-    left: 5%;
+.featured-swiper2{
+    background: url(../img/Featured_Categories/grocery-banner-2.jpg);
+    background-position: start;
+    background-size: cover;
 }
 
 .popular-tag-size-fu {
@@ -193,6 +193,14 @@
     top: 25%;
 }
 
+.swiper-img1{
+    background-image: url(../img/Swiper/slider-1.jpg);
+    background-position: start;
+    background-size: cover;
+    min-height: 100%;
+    
+}
+
 .featured-swiper-size {
     width: 120px;
     height: 120px;
@@ -205,4 +213,33 @@
 .list-search-position-fu{
     top: calc(11% - 10px);
     right: 5%;
+}
+
+.arrow-position{
+    right: 8%;
+    top: 15%;
+}
+
+.swiper-button-next{
+    right: -50px !important;
+    top: -15px !important;
+}
+
+.swiper-button-prev{
+    left: -25px !important;
+    top: -15px !important;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: unset !important;
+}
+.swiper-button-next::after,.swiper-button-prev::after{
+    font-size: unset !important;
+}
+
+.daily-coffee{
+    height: 470px;
+    background-image: url(../img/Daily_Best_Sells/banner-deal.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

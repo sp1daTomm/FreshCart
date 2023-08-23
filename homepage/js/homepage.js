@@ -99,6 +99,7 @@ function nowTime(){
 // 相差天數=(年相差*365天)+(月相差*30天)+日相差 
 
 let realDate1 = document.querySelector('#realDate1');
+console.log(realDate1);
 let hour1 = document.querySelector('#hour1');
 let minute1 = document.querySelector('#minute1');
 let second1 = document.querySelector('#second1');
@@ -106,20 +107,30 @@ let second1 = document.querySelector('#second1');
 setInterval(product1,1000);
 function product1(){
     nowTime();
-    realDate1 = ((2027 - year) * 365) + ((21 - month) * 30) + (39 - date);
-    hour1 = 23 - hour;
-    minute1 = 59 - minute;
-    second1 = 60 - second;
-    realDate1.innerHTML = `${realDate1}Days`;
-    hour1.innerText = `${hour1}Hours`;
-    minute1.innerText = `${minute1}Mins`;
-    second1.innerText = `${second1}Secs`;
-    all=[realDate1,hour1,minute1,second1];
+    let realDate11 = ((2027 - year) * 365) + ((21 - month) * 30) + (39 - date);
+    let hour11 = 23 - hour;
+    let minute11 = 59 - minute;
+    let second11 = 60 - second;
+
+    realDate1.innerText = `${realDate11}Days`;
+    hour1.innerText = `${hour11}Hours`;
+    minute1.innerText = `${minute11}Mins`;
+    second1.innerText = `${second11}Secs`;
+    all=[realDate11,hour11,minute11,second11];
     console.log(all);
     // console.log(`${realDate1}Days`);
     return realDate1.innerHTML;
 }
 
-
-
-
+// cardRergion.innerHTML += `<div class="card">
+//                 <div class="city">${i}</div>
+//                 <div>${cityData.wxcondition}</div>
+//                 <div>降雨機率：${cityData.pop}%</div>
+//                 <div>最低溫度：${cityData.minT}c</div>
+//                 <div>最高溫度：${cityData.maxT}c</div>
+//                 <div>${cityData.ci}</div>
+//                 <div>${cityData.startTime}</div>
+//                 <div>至</div>
+//                 <div>${cityData.endTime}</div>
+//                 </div>`
+// });

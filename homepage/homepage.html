@@ -911,7 +911,28 @@
         <div class="container overhidden">
             <div class="swiper mySwiper1">
                 <div class="swiper-wrapper mt-4 mb-5">
-                    <div class="swiper-slide position-relative">
+                    <div class="swiper-slide">
+                        <span class="d-flex flex-column align-items-start ps-3 ps-lg-5 col-12 col-lg-5 swiper-img1">
+                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Opening Sale Discount 50%</div>
+                            <div class="fs-48p-fu fw-bold text-start mt-1">SuperMarket For Fresh Grocery</div>
+                            <div class="fs-17_5p-fu text-body-secondary text-start">Introduced a new model for online
+                                grocery shopping and convenient home delivery.</div>
+                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Swiper/slider-2.jpg" alt="" class="rounded">
+                        <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
+                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Free Shipping - orders over $100</div>
+                            <div class="fs-48p-fu fw-bold text-start mt-1">Free Shipping on orders over <span
+                                    class="text-success">$100</span></div>
+                            <div class="fs-17_5p-fu text-body-secondary text-start">Free Shipping to First-Time
+                                Customers Only, After promotions and discounts are applied.
+                            </div>
+                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                        </span>
+                    </div>
+                    <!-- <div class="swiper-slide position-relative">
                         <img src="./img/Swiper/slider-1.jpg" alt="" class="rounded">
                         <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
                             <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Opening Sale Discount 50%</div>
@@ -932,7 +953,7 @@
                             </div>
                             <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
                         </span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -940,9 +961,13 @@
         <!-- swiper結束 -->
 
         <!-- Featured Categories開始 -->
-        <div class="container mb-5">
+        <div class="container mb-5 position-relative">
+            <div class="position-absolute arrow-position">
+                <div class="swiper-button-next position-absolute"></div>
+                <div class="swiper-button-prev position-absolute"></div>
+            </div>
             <div class="fs-24_5p-fu fw-bold mb-3">Featured Categories</div>
-            <div class="swiper mySwiper2 position-relative">
+            <div class="swiper mySwiper2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide border rounded pb-4">
                         <img src="./img/Featured_Categories/swiper/category-dairy-bread-eggs.jpg" alt=""
@@ -995,8 +1020,6 @@
                         <div class="fs-14p-fu text-body-tertiary fw-bold">Pet Care</div>
                     </div>
                 </div>
-                <div class="swiper-button-next position-absolute"></div>
-                <div class="swiper-button-prev position-absolute"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
@@ -1004,31 +1027,25 @@
 
         <!-- 兩張圖片開始 -->
         <div class="container">
-            <div class="row justify-content-between">
+            <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="position-relative">
-                        <img src="./img/Featured_Categories/grocery-banner.png" alt="" class="featured-twoimg-size-fu">
-                        <div class="position-absolute featured-twoimg-posi-fu">
-                            <div class="fs-24_5p-fu fw-bold ">Fruits & Vegetables</div>
-                            <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 30% Off</div>
-                            <br>
-                            <button type="button" class="btn btn-dark">Shop Now</button>
-                        </div>
+                    <div class="py-4 px-5 featured-swiper1 rounded">
+                        <div class="fs-24_5p-fu fw-bold ">Fruits & Vegetables</div>
+                        <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 30% Off</div>
+                        <br>
+                        <button type="button" class="btn btn-dark">Shop Now</button>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <div class="d-flex justify-content-end position-relative mb-5">
-                        <img src="./img/Featured_Categories/grocery-banner-2.jpg" alt=""
-                            class="featured-twoimg-size-fu">
-                        <div class="position-absolute featured-twoimg-posi-fu ms-3">
-                            <div class="fs-24_5p-fu fw-bold ">Freshly Baked Buns</div>
-                            <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 25% Off</div>
-                            <br>
-                            <button type="button" class="btn btn-dark">Shop Now</button>
-                        </div>
+                <div class="col-12 col-md-6 mt-3 m-md-0">
+                    <div class="py-4 px-5 featured-swiper2 rounded">
+                        <div class="fs-24_5p-fu fw-bold ">Freshly Baked Buns</div>
+                        <div class="fs-14p-fu fw-bold text-body-secondary">Get Upto 25% Off</div>
+                        <br>
+                        <button type="button" class="btn btn-dark">Shop Now</button>
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- 兩張圖片結束 -->
 
@@ -1305,166 +1322,168 @@
         <!-- Popular Products結束 -->
 
         <!-- Daily Best Sells開始 -->
-        <div class="container mt-3">
+        <div class="container mt-3 p-0">
             <div class="fw-bold fs-24_5p-fu mb-3 mt-5">Daily Best Sells</div>
             <div class="row w-100 p-0 m-0">
-
-                <div class=" overflow-x-auto row">
-                    <!-- 第一件 -->
-                    <div class="card col-12 col-md-6 col-lg-3 p-0">
-                        <img src="./img/Daily_Best_Sells/banner-deal.jpg" class="card-img-top position-relative" alt="">
-                        <div class="position-absolute mt-4 ms-3">
-                            <div class="fs-24_5p-fu fw-bold text-white">100% Organic Coffee Beans.</div>
-                            <div class="fs-14 text-white mb-3">Get the best deal before close.</div>
-                            <a href="#" class="btn btn-success text-center">Shop Now -></a>
-                        </div>
-                    </div>
-
-                    <!-- 第二件 -->
-                    <div class="card col-12 col-md-6 col-lg-3 p-0">
-                        <img src="./img/Daily_Best_Sells/product-img-11.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <div class="fs-12p-fu text-body-secondary">Tea, Coffee & Drinks</div>
-                            <a href="#"
-                                class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Roast
-                                Ground Coffee</a>
-                            <div class="mb-2 d-flex justify-content-between">
-                                <div>
-                                    <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
-                                </div>
-                                <div>
-                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                    <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                    <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
-                                    <span class="fs-12_25p-fu text-body-secondary">4.5</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
-                            <div class="row">
-                                <div class="card col m-1">
-                                    <div class="card-body fs-13p-fu text-body-tertiary" id="realDate1">
-                                        Days
-                                    </div>
-                                </div>
-                                <div class="card col m-1">
-                                    <div class="card-body">
-                                        <span class="fs-13p-fu text-body-tertiary" id="hour1">Hours</span>
-                                    </div>
-                                </div>
-                                <div class="card col m-1">
-                                    <div class="card-body fs-13p-fu text-body-tertiary" id="minute1">
-                                        Mins
-                                    </div>
-                                </div>
-                                <div class="card col m-1">
-                                    <div class="card-body fs-13p-fu text-body-tertiary" id="second1">
-                                        Secs
-                                    </div>
-                                </div>
+                <div class="table-responsive-xl pb-6">
+                    <div class="row row-cols-lg-4 row-cols-1 row-cols-md-2 g-4 flex-nowrap">
+                        <!-- 第一件 -->
+                        <div class="card col-12 col-md-6 col-lg-3 p-0">
+                            <div class="position-absolute pt-3 px-3 daily-coffee rounded">
+                                <div class="fs-24_5p-fu fw-bold text-white">100% Organic Coffee Beans.</div>
+                                <div class="fs-14 text-white mb-3">Get the best deal before close.</div>
+                                <a href="#" class="btn btn-success text-center">Shop Now -></a>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- 第三件 -->
-                <div class="card col-12 col-md-6 col-lg-3 p-0">
-                    <img src="./img/Daily_Best_Sells/product-img-12.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
-                        <a href="#"
-                            class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Crushed
-                            Tomatoes</a>
-                        <div class="mb-2 d-flex justify-content-between">
-                            <div>
-                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
-                            </div>
-                            <div>
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
-                                <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                        <!-- 第二件 -->
+                        <div class="card col-12 col-md-6 col-lg-3 p-0">
+                            <img src="./img/Daily_Best_Sells/product-img-11.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <div class="fs-12p-fu text-body-secondary">Tea, Coffee & Drinks</div>
+                                <a href="#"
+                                    class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Roast
+                                    Ground Coffee</a>
+                                <div class="mb-2 d-flex justify-content-between">
+                                    <div>
+                                        <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                                    </div>
+                                    <div>
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                        <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
+                                <div class="row">
+                                    <div class="card col m-1 p-0">
+                                        <div class="card-body fs-13p-fu text-body-tertiary p-0" id="realDate1">
+                                            Days
+                                        </div>
+                                    </div>
+                                    <div class="card col m-1 p-0">
+                                        <div class="card-body fs-13p-fu text-body-tertiary p-0" id="hour1">
+                                            Hours
+                                        </div>
+                                    </div>
+                                    <div class="card col m-1 p-0">
+                                        <div class="card-body fs-13p-fu text-body-tertiary p-0" id="minute1">
+                                            Mins
+                                        </div>
+                                    </div>
+                                    <div class="card col m-1 p-0">
+                                        <div class="card-body fs-13p-fu text-body-tertiary p-0" id="second1">
+                                            Secs
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
-                    </div>
-                </div>
 
-                <!-- 第四件 -->
-                <div class="card col-12 col-md-6 col-lg-3 p-0">
-                    <img src="./img/Daily_Best_Sells/product-img-13.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
-                        <a href="#"
-                            class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Golden
-                            Pineapple</a>
-                        <div class="mb-2 d-flex justify-content-between">
-                            <div>
-                                <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
-                            </div>
-                            <div>
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
-                                <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
-                                <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                        <!-- 第三件 -->
+                        <div class="card col-12 col-md-6 col-lg-3 p-0">
+                            <img src="./img/Daily_Best_Sells/product-img-12.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
+                                <a href="#"
+                                    class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Crushed
+                                    Tomatoes</a>
+                                <div class="mb-2 d-flex justify-content-between">
+                                    <div>
+                                        <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                                    </div>
+                                    <div>
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                        <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
+
+                        <!-- 第四件 -->
+                        <div class="card col-12 col-md-6 col-lg-3 p-0">
+                            <img src="./img/Daily_Best_Sells/product-img-13.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <div class="fs-12p-fu text-body-secondary">Fruits & Vegetables</div>
+                                <a href="#"
+                                    class="fs-14p-fu text-body fw-bold link-offset-2 link-underline link-underline-opacity-0">Golden
+                                    Pineapple</a>
+                                <div class="mb-2 d-flex justify-content-between">
+                                    <div>
+                                        <span class="fs-14p-fu">$13 <del class="text-body-secondary">$18</span>
+                                    </div>
+                                    <div>
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/one-point.png" alt="" class="rating-size-fu">
+                                        <img src="./img/Popular_Product/half.png" alt="" class="rating-size-fu">
+                                        <span class="fs-12_25p-fu text-body-secondary">4.5</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-success fs-12_25p-fu pt-1 pb-1 col-12">+ Add to cart</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Daily Best Sells結束 -->
 
-        <!-- 各種說明開始 -->
-        <div class="container">
-            <div class="row mt-5 mb-5">
-                <div class="col-12 col-md-6 col-lg-3 p-3">
-                    <div class="card-body">
-                        <img src="./img/up_of_footer/clock.svg" alt="" class="mb-4">
-                        <h5 class="card-title fs-17_5p-fu mb-2">10 minute grocery now</h5>
-                        <p class="card-text fs-14p-fu">Get your order delivered to your doorstep at the earliest from
-                            FreshCart pickup
-                            stores near you.</p>
-                    </div>
+        </div>
+    </div>
+    <!-- Daily Best Sells結束 -->
+
+    <!-- 各種說明開始 -->
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-12 col-md-6 col-lg-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/clock.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">10 minute grocery now</h5>
+                    <p class="card-text fs-14p-fu">Get your order delivered to your doorstep at the earliest from
+                        FreshCart pickup
+                        stores near you.</p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 p-3">
-                    <div class="card-body">
-                        <img src="./img/up_of_footer/gift.svg" alt="" class="mb-4">
-                        <h5 class="card-title fs-17_5p-fu mb-2">Best Prices & Offers</h5>
-                        <p class="card-text fs-14p-fu">Cheaper prices than your local supermarket, great cashback offers
-                            to
-                            top it off. Get best pricess & offers.</p>
-                    </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/gift.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">Best Prices & Offers</h5>
+                    <p class="card-text fs-14p-fu">Cheaper prices than your local supermarket, great cashback offers
+                        to
+                        top it off. Get best pricess & offers.</p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 p-3">
-                    <div class="card-body">
-                        <img src="./img/up_of_footer/package.svg" alt="" class="mb-4">
-                        <h5 class="card-title fs-17_5p-fu mb-2">Wide Assortment</h5>
-                        <p class="card-text fs-14p-fu">Choose from 5000+ products across food, personal care, household,
-                            bakery, veg and non-veg & other categories.</p>
-                    </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/package.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">Wide Assortment</h5>
+                    <p class="card-text fs-14p-fu">Choose from 5000+ products across food, personal care, household,
+                        bakery, veg and non-veg & other categories.</p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 p-3">
-                    <div class="card-body">
-                        <img src="./img/up_of_footer/refresh-cw.svg" alt="" class="mb-4">
-                        <h5 class="card-title fs-17_5p-fu mb-2">Easy Returns
-                        </h5>
-                        <p class="card-text fs-14p-fu">Not satisfied with a product? Return it at the doorstep & get a
-                            refund within hours. No questions asked<span>
-                                <a href=""
-                                    class="text-success link-offset-2 link-underline link-underline-opacity-0">policy</a></span>.
-                        </p>
-                    </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-3">
+                <div class="card-body">
+                    <img src="./img/up_of_footer/refresh-cw.svg" alt="" class="mb-4">
+                    <h5 class="card-title fs-17_5p-fu mb-2">Easy Returns
+                    </h5>
+                    <p class="card-text fs-14p-fu">Not satisfied with a product? Return it at the doorstep & get a
+                        refund within hours. No questions asked<span>
+                            <a href=""
+                                class="text-success link-offset-2 link-underline link-underline-opacity-0">policy</a></span>.
+                    </p>
                 </div>
             </div>
         </div>
-        <!-- 各種說明結束 -->
+    </div>
+    <!-- 各種說明結束 -->
 
     </div>
     <!-- body結束 -->
@@ -1693,8 +1712,18 @@
 
         var swiper2 = new Swiper(".mySwiper2", {
             autoplay: true,
-            slidesPerView: 6,
+            slidesPerView: 2,
             spaceBetween: 20,
+            breakpoints: {
+                820: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1400: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                },
+            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
