@@ -123,18 +123,20 @@ li {
 }
 .offcanvas-body{
     padding: 20px 16px !important;
-    width: 247px!important;
+    /* width: 247px!important; */
     /* height: 100vh; */
+    width: initial;
     overflow-x: hidden;
 }
 .offcanvas-header {
     padding: 20px 16px !important;
-    width: 247px!important;
+    /* width: 247px!important; */
+    min-width: 247px;
     display: flex;
     flex-shrink: 0;
 }
 .offcanvas-start.show {
-    width: 247px!important;
+    /* width: 247px!important; */
     height: 100vh;
     overflow-x: hidden;
 }
@@ -188,7 +190,7 @@ li {
     margin: 0 auto!important;
 }
 .main-chi {
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     background-color: white;
     padding: 100px 16px;
@@ -450,9 +452,10 @@ table.myFormat tr td  {
 
 @media (min-width: 1200px) {
     .main-chi{
+        max-width: 1200px;
         display: flex;
         justify-content: center;
-        padding:0 5% 100px 10%;
+        padding:0 0 100px ;
     }
     .offcanvas-body{
         border-right: 2px dotted rgb(223, 226, 225);
