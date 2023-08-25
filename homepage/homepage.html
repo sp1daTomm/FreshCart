@@ -66,9 +66,85 @@
                                 <img src="./img/head/search.png" alt=""
                                     class="search-size-fu position-absolute search-position-fu">
                             </span>
-                            <button class="btn btn-outline-secondary fs-14p-fu fw-bold text-body-tertiary"
-                                type="submit">
+
+                            <!-- Location表單 開始 -->
+                            <button class="btn btn-outline-secondary fs-14p-fu fw-bold text-body-tertiary" type="button"
+                                data-bs-toggle="modal" data-bs-target="#LocationModal">
                                 <img src="./img/head/map.png" class="search-size-fu me-2"></img>Location</button>
+
+                            <div class="modal fade" id="LocationModal" tabindex="-1"
+                                aria-labelledby="LocationModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content width80">
+                                        <div class="modal-header border-0">
+                                            <div class="d-flex flex-column">
+                                                <div class="fs-17_5p-fu fw-bold">Choose your Delivery Location</div>
+                                                <div class="fs-12_25p-fu text-body-tertiary">Enter your address and we
+                                                    will
+                                                    specify the offer you area.</div>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body border-0
+                                        ">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Search your area" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fs-14p-fu fw-bold">Select Location</div>
+                                            <button type="button" class="btn btn-outline-secondary fs-12_25p-fu">Clear
+                                                All</button>
+                                        </div>
+                                        <div class="selectLocation">
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Alabama</div>
+                                                <div class="fs-14p-fu">Min:$20</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Alaska</div>
+                                                <div class="fs-14p-fu">Min:$30</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Arizona</div>
+                                                <div class="fs-14p-fu">Min:$50</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">California</div>
+                                                <div class="fs-14p-fu">Min:$29</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Colorado</div>
+                                                <div class="fs-14p-fu">Min:$80</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Florida</div>
+                                                <div class="fs-14p-fu">Min:$90</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Arizona</div>
+                                                <div class="fs-14p-fu">Min:$50</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">California</div>
+                                                <div class="fs-14p-fu">Min:$29</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Colorado</div>
+                                                <div class="fs-14p-fu">Min:$80</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3">
+                                                <div class="fs-14p-fu">Florida</div>
+                                                <div class="fs-14p-fu">Min:$90</div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Location表單 結束 -->
+
                         </form>
                     </div>
                 </nav>
@@ -88,63 +164,39 @@
                 </div>
 
                 <!-- 小icon的user -->
-                <button type="button" class="btn btn-primary p-0 border-0 bg-body" data-bs-toggle="modal"
-                    data-bs-target="#userModal">
+                <button type="button" class="btn btn-primary p-0 border-0 bg-body navbar-toggler"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasUserNavbar">
                     <img src="./img/head/user.png" alt="" class="nav-size-fu me-3">
                 </button>
 
                 <!-- user的登入/註冊介面 -->
-                <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog user-position">
-                        <div class="modal-content p-2">
+                <div class="offcanvas top-to-bot rounded p-3" id="offcanvasUserNavbar">
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title fs-24_5p-fu fw-bold" id="offcanvasUserNavbarLabel">Sign Up</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="fs-14p-fu mb-1">Name</div>
+                        <input type="text" class="form-control mb-3" placeholder="Enter Your Name">
 
-                            <!-- 標題 開始 -->
-                            <div class="modal-header user-border-clear">
-                                <div class="modal-title fs-24_5p-fu fw-bold" id="userModalLabel">Sign Up</div>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <!-- 標題 結束 -->
+                        <div class="fs-14p-fu mb-1">Email address</div>
+                        <input type="text" class="form-control mb-3" placeholder="Enter Your Email address">
 
-                            <!-- 內容 開始 -->
-                            <div class="modal-body user-border-clear">
-                                <div class="fs-14p-fu text-body-secondary">Name</div>
-                                <div><input class="form-control me-2 fs-14p-fu  text-body-tertiary opacity-75 col-12"
-                                        type="search" placeholder="Enter Your Name" aria-label="Search">
-                                </div>
-                                <div class="fs-14p-fu text-body-secondary">Email address</div>
-                                <div><input class="form-control me-2 fs-14p-fu  text-body-tertiary opacity-75 col-12"
-                                        type="search" placeholder="Enter Email Address" aria-label="Search">
-                                </div>
-                                <div class="fs-14p-fu text-body-secondary">Passwrod</div>
-                                <div><input class="form-control me-2 fs-14p-fu  text-body-tertiary opacity-75 col-12"
-                                        type="search" placeholder="Enter Password" aria-label="Search">
-                                </div>
-                                <div class="fs-12_25p-fu text-body-tertiary">
-                                    By Signup, you agree to our <span><a href=""
-                                            class="link-offset-2 link-underline link-underline-opacity-0 text-success">Terms
-                                            of Service</a></span> & <span><a href=""
-                                            class="link-offset-2 link-underline link-underline-opacity-0 text-success">Privacy
-                                            Policy</a></span>
-                                </div>
+                        <div class="fs-14p-fu mb-1">Password</div>
+                        <input type="text" class="form-control mb-3" placeholder="Enter Your Password">
+                        <div class="mb-3">
+                            <div class="fs-12_25p-fu text-body-tertiary">By Signup, you agree to our <span><a href=""
+                                        class="text-success link-offset-2 link-underline link-underline-opacity-0">Terms
+                                        of Service</a></span> & <span><a href=""
+                                        class="text-success link-offset-2 link-underline link-underline-opacity-0">Privacy
+                                        Policy</a></span>
                             </div>
-                            <!-- 內容 結束 -->
-
-                            <!-- 尾巴 開始 -->
-                            <div class="modal-footer user-border-clear d-flex justify-content-start">
-                                <button type="button" class="btn btn-success fs-14p-fu fw-bold ">Sign Up</button>
-                            </div>
-                            <!-- 尾巴 結束 -->
-
-                            <!-- 尾巴的尾巴 開始 -->
-                            <div class="fs-14p-fu text-center col-12 text-body-secondary mt-2 mb-3">
-                                Already have an account?<span
-                                    class="link-offset-2 link-underline link-underline-opacity-0 text-success"> Sign
-                                    in</span>
-                            </div>
-                            <!-- 尾巴的尾巴 結束 -->
                         </div>
+                        <button type="button" class="btn btn-success">Sign Up</button>
+                    </div>
+                    <div class="d-flex justify-content-center fs-14p-fu">Already have an account?
+                        <span><a href="" class="text-success link-offset-2 link-underline link-underline-opacity-0">Sign
+                                in</a></span>
                     </div>
                 </div>
 
@@ -358,10 +410,82 @@
 
                         <!-- 定位按鈕 -->
                         <button type="button"
-                            class="btn btn-light bg-body border border-1 col-12 mt-2 opacity-75 fs-14p-fu">
+                            class="btn btn-light bg-body border border-1 col-12 mt-2 opacity-75 fs-14p-fu" 
+                            data-bs-toggle="modal" data-bs-target="#LocationModal2">
                             <img src="./img/head/map.png" alt="" class="search-size-fu me-2">Pick Location
                         </button>
 
+                        <div class="modal fade" id="LocationModal2" tabindex="-1"
+                                aria-labelledby="LocationModal2Label" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content width80">
+                                        <div class="modal-header border-0">
+                                            <div class="d-flex flex-column">
+                                                <div class="fs-17_5p-fu fw-bold">Choose your Delivery Location</div>
+                                                <div class="fs-12_25p-fu text-body-tertiary">Enter your address and we
+                                                    will
+                                                    specify the offer you area.</div>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body border-0
+                                        ">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Search your area" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fs-14p-fu fw-bold">Select Location</div>
+                                            <button type="button" class="btn btn-outline-secondary fs-12_25p-fu">Clear
+                                                All</button>
+                                        </div>
+                                        <div class="selectLocation">
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Alabama</div>
+                                                <div class="fs-14p-fu">Min:$20</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Alaska</div>
+                                                <div class="fs-14p-fu">Min:$30</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Arizona</div>
+                                                <div class="fs-14p-fu">Min:$50</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">California</div>
+                                                <div class="fs-14p-fu">Min:$29</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Colorado</div>
+                                                <div class="fs-14p-fu">Min:$80</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Florida</div>
+                                                <div class="fs-14p-fu">Min:$90</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Arizona</div>
+                                                <div class="fs-14p-fu">Min:$50</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">California</div>
+                                                <div class="fs-14p-fu">Min:$29</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3 border-bottom">
+                                                <div class="fs-14p-fu">Colorado</div>
+                                                <div class="fs-14p-fu">Min:$80</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between p-3">
+                                                <div class="fs-14p-fu">Florida</div>
+                                                <div class="fs-14p-fu">Min:$90</div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <!-- more按鈕 -->
                         <div>
                             <button class="btn btn-primary bg-success border-0 col-12 mt-2 fs-14p-fu" type="button"
@@ -743,28 +867,28 @@
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Mega menu
                 </button>
-                <ul class="dropdown-menu">
-                    <div class="d-flex">
+                <ul class="dropdown-menu p-0">
+                    <div class="d-flex p-2 p-lg-4 megaDropDown m-auto">
                         <div class="col-3">
-                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">Dairy,
+                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold pb-2">Dairy,
                                 Bread & Eggs
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Butter
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Butter
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Milk
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Milk
                                 Drinks
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Curd &
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Curd &
                                 Yogurt
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Eggs
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Eggs
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Buns &
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Buns &
                                 Bakery
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Cheese
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Cheese
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Condensed
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Condensed
                                 Milk
                             </li>
                             <li class="list-group-item fs-14p-fu text-body-secondary border-0">Condensed
@@ -772,52 +896,52 @@
                             </li>
                         </div>
                         <div class="col-3">
-                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">
+                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold pb-2">
                                 Breakfast & Instant Food
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Breakfast
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Breakfast
                                 Cereal
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Noodles,
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Noodles,
                                 Pasta & Soup
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Frozen
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Frozen
                                 Veg Snacks
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Frozen
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Frozen
                                 Non-Veg Snacks
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">
                                 Vermicelli
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Instant
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Instant
                                 Mixes
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Batter
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Batter
                             </li>
                             <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruit and
                                 Juices
                             </li>
                         </div>
                         <div class="col-3">
-                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold">Cold
+                            <li class="list-group-item fs-14p-fu border-0 text-success fw-bold pb-2">Cold
                                 Drinks & Juices
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Soft
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Soft
                                 Drinks
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Fruit
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Fruit
                                 Juices
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Coldpress
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Coldpress
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Water &
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Water &
                                 Ice Cubes
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Health
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Health
                                 Drinks
                             </li>
-                            <li class="list-group-item fs-14p-fu text-body-secondary border-0">Herbal
+                            <li class="list-group-item fs-14p-fu text-body-secondary border-0 pb-2">Herbal
                                 Drinks
                             </li>
                             <li class="list-group-item fs-14p-fu text-body-secondary border-0">Milk
@@ -825,7 +949,7 @@
                             </li>
                         </div>
                         <div class="col-3">
-                            <img src="./img/head/hideInList.jpg" alt="">
+                            <img src="./img/head/hideInList.jpg" class="w-100" alt="">
                         </div>
                     </div>
                 </ul>
@@ -911,26 +1035,31 @@
         <div class="container overhidden">
             <div class="swiper mySwiper1">
                 <div class="swiper-wrapper mt-4 mb-5">
-                    <div class="swiper-slide">
-                        <span class="d-flex flex-column align-items-start ps-3 ps-lg-5 col-12 col-lg-5 swiper-img1">
-                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Opening Sale Discount 50%</div>
-                            <div class="fs-48p-fu fw-bold text-start mt-1">SuperMarket For Fresh Grocery</div>
-                            <div class="fs-17_5p-fu text-body-secondary text-start">Introduced a new model for online
-                                grocery shopping and convenient home delivery.</div>
-                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
-                        </span>
+                    <div class="swiper-slide position-relative">
+                        <div class="swiper-img-1 rounded">
+                            <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
+                                <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Opening Sale Discount 50%</div>
+                                <div class="fs-48p-fu fw-bold text-start mt-1">SuperMarket For Fresh Grocery</div>
+                                <div class="fs-17_5p-fu text-body-secondary text-start">Introduced a new model for
+                                    online
+                                    grocery shopping and convenient home delivery.</div>
+                                <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                            </span>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/Swiper/slider-2.jpg" alt="" class="rounded">
-                        <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
-                            <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Free Shipping - orders over $100</div>
-                            <div class="fs-48p-fu fw-bold text-start mt-1">Free Shipping on orders over <span
-                                    class="text-success">$100</span></div>
-                            <div class="fs-17_5p-fu text-body-secondary text-start">Free Shipping to First-Time
-                                Customers Only, After promotions and discounts are applied.
-                            </div>
-                            <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
-                        </span>
+                        <div class="swiper-img-2 rounded">
+                            <span class="position-absolute swiper-words-1-fu d-flex flex-column align-items-start">
+                                <div class="fs-12p-fu fw-bold bg-warning rounded p-1">Free Shipping - orders over $100
+                                </div>
+                                <div class="fs-48p-fu fw-bold text-start mt-1">Free Shipping on orders over <span
+                                        class="text-success">$100</span></div>
+                                <div class="fs-17_5p-fu text-body-secondary text-start">Free Shipping to First-Time
+                                    Customers Only, After promotions and discounts are applied.
+                                </div>
+                                <button type="button" class="btn btn-dark mt-3">Shop Now -></button>
+                            </span>
+                        </div>
                     </div>
                     <!-- <div class="swiper-slide position-relative">
                         <img src="./img/Swiper/slider-1.jpg" alt="" class="rounded">
