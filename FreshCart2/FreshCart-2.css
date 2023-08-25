@@ -17,21 +17,26 @@
 }
 
 /* 綠字 */
-.f1 {
-    color: #0aad0a;
 
-}
 
 /* 14px字 */
+
 .ff {
     font-size: 14px;
     display: inline-block;
+    color:rgb(136, 147, 151);
+    padding-bottom: 30px;
+}
+.f1 {
+    color: #0aad0a;
+    
 }
 
 /* sreach dropdown */
 .sd {
-    width: 100%;
-    padding: 24px 0px;
+    /* width: 100%; */
+    margin-top:10px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,10 +44,10 @@
     overflow-wrap: break-word;
 }
 
-.container-fluid {
+/* .container-fluid {
     width: 95%;
     margin-left: 1%;
-}
+} */
 
 .dropdown {
     width: 90%;
@@ -51,11 +56,11 @@
 
 
 /* body-t 裡的dropdown */
-.btn.btn-drop{
+/* .btn.btn-drop{
     font-size: 14px;
     text-align: start;
     width: 100%;
-}
+} */
 
 li.nav-item {
     position: relative;
@@ -68,7 +73,9 @@ li.nav-item {
 
 /* 漢堡 */
 .bi-text-indent-right:before {
-    width: 24px;
+    width: 32px;
+    height: 32px;
+    fill:currentColor;
     color: black;
     font-weight: 500;
 }
@@ -144,6 +151,11 @@ li {
     flex-wrap: nowrap;
     position: relative;
 }
+/* offcanvas items 點擊變色 */
+.nav-item:active {
+    background-color: rgb(240, 243, 242);
+    color: rgb(33, 49, 60);
+}
 /* .dropdown-item.d-flex {
     background-color: (206, 239, 206)
 } */
@@ -172,6 +184,7 @@ li {
 } */
 .b-main-chi{
     height: 100vh;
+    width: 100%;
     margin: 0 auto!important;
 }
 .main-chi {
@@ -202,9 +215,8 @@ li {
 }
 
 .body-t-chi {
-    width: 100%;
+    border-color: #dee2e6;
     /* margin: auto; */
-
 }
 /* .box-m-chi {
     
@@ -278,7 +290,7 @@ ul.dropdown-menu {
 
 /* sd裡的dropdown */
 botton.dropdown-menu{
-    position: relative;
+padding: 0;
 }
 .dropdown-menu.show {
     width: 130%;
@@ -307,9 +319,6 @@ a.dropdown-item1 {
     width: 9px !important;
     transform: rotate(90deg);
     transition: transform 0.3s ease;
-    position: absolute;
-    right: 10px;
-    top: 15px;
     cursor: pointer;
     z-index: 1000;
 }
@@ -427,15 +436,33 @@ table.myFormat tr td  {
     font-weight: 500;
 }
 
+/* RWD */
+
+@media (min-width:768px) {
+.sd {
+    flex-direction: row;
+}
+}
+
+@media (min-width:992px) {
+
+}
+
 @media (min-width: 1200px) {
+    .main-chi{
+        display: flex;
+        justify-content: center;
+        padding:0 5% 100px 10%;
+    }
     .offcanvas-body{
         border-right: 2px dotted rgb(223, 226, 225);
-        overflow-y: scroll;
+        height: 100vh;
+        margin: 0!important;
     }
     .offcanvas-header{
-        border-right: 1px dotted rgb(223, 226, 225);
+        border-right: 2px dotted rgb(223, 226, 225);
     }
-  
+
     .navbar {
         width: calc(100% - 247px);
         margin-left: 260px;
@@ -443,4 +470,24 @@ table.myFormat tr td  {
     .offcanvas-title {
         margin-left: -20px;
     }
+
+    .marginTop {
+        margin-top: 50px;
+    }
 }
+
+/* @media (min-width: 1600px) {
+    .main-chi{
+        display: flex;
+        justify-content: center;
+        padding-right: 15%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .main-chi{
+        display: flex;
+        justify-content: center;
+        padding-right: 20%;
+    }
+} */

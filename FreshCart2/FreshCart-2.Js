@@ -11,24 +11,21 @@ btns.forEach((item) => {
   });
 });
 
-// const btns = document.querySelectorAll('.chev1');
-//   btns.forEach((item) => {
-//     item.addEventListener('click', () => {
-//       item.classList.toggle('rotate');
-//     });
-//   });
 
-
-  // $(document).ready(function () {
-  //   var selectAllCheckBox = $(".checkAll");
-  // });
-
-  // selectAllCheckBox.on("change", function () {
-  //   var isChecked = $(this).prop("checked");
-
-  //   var checkedboxes = $("input[type='checkbox']").not(this);
-
-  //   checkedboxes.prop("checked", isChecked);
-
-  // });
+var checkboxes  = document.querySelectorAll("input[type = 'checkbox']");
+console.log(checkboxes);
+function checkAll(myCheckbox) {
+  console.log(myCheckbox);
+  if(myCheckbox.checked == true) {
+    checkboxes.forEach(function(checkbox) {
+      checkbox.checked = true;
+    });
+    console.log(myCheckbox);
+  }
+  else {
+    checkboxes.forEach(function(checkbox){
+      checkbox.checked =false;
+    });
+  }
+}
 
