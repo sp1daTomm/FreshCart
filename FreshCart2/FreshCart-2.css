@@ -1,6 +1,13 @@
 * {
     box-sizing: border-box;
 }
+body {
+    overflow: hidden;
+}
+
+.scrollY {
+/* height: 100vh; */
+}
 
 -root {
     --text-color: color:#889397;
@@ -9,7 +16,6 @@
 .navbar {
     background-color: rgb(255, 255, 255,0.8)!important;
     padding: 16px;
-   
     /* text-align: center; */
 }
 .navbar-glass {
@@ -67,6 +73,7 @@ li.nav-item {
     padding: 20px 0px;
     /* width: 247px;
     padding: 0px 16px; */
+    align-items: center;
 }
 
 
@@ -124,7 +131,7 @@ li {
 .offcanvas-body{
     padding: 20px 16px !important;
     /* width: 247px!important; */
-    /* height: 100vh; */
+    height: 100%;
     width: initial;
     overflow-x: hidden;
 }
@@ -144,18 +151,25 @@ li {
 .offcanvas-start.showing {
     height: 100vh;
 }
-.offcanvas {
+/* .offcanvas {
     --bs-offcanvas-width: 247px;
     --bs-offcanvas-height:100vh;
-}
+} */
 .nav-item{
     display: flex;
     flex-wrap: nowrap;
     position: relative;
 }
 /* offcanvas items 點擊變色 */
-.nav-item:active {
+/* .nav-item:active {
     background-color: rgb(240, 243, 242);
+    color: rgb(33, 49, 60);
+} */
+.nav-item a {
+    padding: 10px 0;
+}
+.nav-item a:active {
+    background-color: rgb(240, 243, 242)!important;
     color: rgb(33, 49, 60);
 }
 /* .dropdown-item.d-flex {
@@ -197,6 +211,7 @@ li {
     /* display: block; */
     justify-content: center;
     align-items: center;
+    /* overflow-y: scroll; */
 }
 
 .bbody-chi {
@@ -426,6 +441,11 @@ table.myFormat tr td  {
     background-color: #0aad0a;
 }
 
+.page-link.plg:focus {
+ color:white!important;
+ background-color: #0aad0a!important;
+ /* box-shadow: #0aad0a!important; */
+}
 .pp {
     background-color:#ecf0ef;
     color: rgb(92, 108, 117)!important;
@@ -468,7 +488,7 @@ table.myFormat tr td  {
 
     .navbar {
         width: calc(100% - 247px);
-        margin-left: 260px;
+        margin-left: 16.666%;
     }
     .offcanvas-title {
         margin-left: -20px;
