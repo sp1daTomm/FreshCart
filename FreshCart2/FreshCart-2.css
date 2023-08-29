@@ -5,9 +5,6 @@ body {
     overflow: hidden;
 }
 
-.scrollY {
-/* height: 100vh; */
-}
 
 -root {
     --text-color: color:#889397;
@@ -35,7 +32,6 @@ body {
 }
 .f1 {
     color: #0aad0a;
-    
 }
 
 /* sreach dropdown */
@@ -44,29 +40,13 @@ body {
     margin-top:10px;
     padding: 24px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-wrap: break-word;
 }
 
-/* .container-fluid {
-    width: 95%;
-    margin-left: 1%;
-} */
-
-.dropdown {
-    width: 90%;
-    position: relative;
+.dropdownSd {
 }
-
-
-/* body-t 裡的dropdown */
-/* .btn.btn-drop{
-    font-size: 14px;
-    text-align: start;
-    width: 100%;
-} */
 
 li.nav-item {
     position: relative;
@@ -130,26 +110,27 @@ li {
 }
 .offcanvas-body{
     padding: 20px 16px !important;
-    /* width: 247px!important; */
+    width: 247px!important;
     height: 100%;
     width: initial;
     overflow-x: hidden;
 }
 .offcanvas-header {
     padding: 20px 16px !important;
-    /* width: 247px!important; */
+    width: 247px!important;
     min-width: 247px;
     display: flex;
     flex-shrink: 0;
 }
 .offcanvas-start.show {
-    /* width: 247px!important; */
+    width: 247px!important;
     height: 100vh;
     overflow-x: hidden;
 }
 /* 去除offcanvas 出現時中途消失  */
 .offcanvas-start.showing {
     height: 100vh;
+    width: 247px!important;
 }
 /* .offcanvas {
     --bs-offcanvas-width: 247px;
@@ -215,7 +196,7 @@ li {
 }
 
 .bbody-chi {
-    padding: 0;
+    /* padding: 0; */
     width: 100%;
 }
 
@@ -403,7 +384,8 @@ th {
 }
 
 .th-chi{
-    background-color: rgb(223, 226, 225)!important;
+    background-color: rgb(240, 243, 242)!important;
+    opacity: 1!important;
     
 }
 table.myFormat tr td  {
@@ -429,7 +411,7 @@ table.myFormat tr td  {
 
 
 
-/* body-b pagenation */
+/* body-b pagination */
 
 .page-item:not(:first-child) .page-link {
     margin-right:0.25rem;
@@ -459,36 +441,50 @@ table.myFormat tr td  {
 }
 
 /* RWD */
+@media (min-width:576) {
+.sd {
+flex-direction: column;
+}
+}
 
 @media (min-width:768px) {
-.sd {
-    flex-direction: row;
-}
+/* .bbody-chi {
+        margin: 0 109px;
+    } */
 }
 
 @media (min-width:992px) {
-
+/* .bbody-chi {
+    margin: 0 53px;
+} */
 }
 
 @media (min-width: 1200px) {
     .main-chi{
+        width: 90%;
         max-width: 1200px;
         display: flex;
         justify-content: center;
         padding:0 0 100px ;
     }
+    .bbody-chi {
+        margin-left: 7%;
+    }
     .offcanvas-body{
         border-right: 2px dotted rgb(223, 226, 225);
         height: 100vh;
+        width: auto;
         margin: 0!important;
     }
     .offcanvas-header{
         border-right: 2px dotted rgb(223, 226, 225);
+        width: auto;
     }
 
     .navbar {
-        width: calc(100% - 247px);
-        margin-left: 16.666%;
+        width: calc(100% - 255px)!important;
+        margin-left: 258px;
+
     }
     .offcanvas-title {
         margin-left: -20px;
@@ -499,18 +495,10 @@ table.myFormat tr td  {
     }
 }
 
-/* @media (min-width: 1600px) {
-    .main-chi{
-        display: flex;
-        justify-content: center;
-        padding-right: 15%;
-    }
-}
 
-@media (min-width: 1800px) {
-    .main-chi{
-        display: flex;
-        justify-content: center;
-        padding-right: 20%;
-    }
-} */
+
+@media (min-width: 1500px) {
+    .bbody-chi {
+        margin-left: auto;
+}
+}
